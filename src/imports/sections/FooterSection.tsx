@@ -22,7 +22,7 @@ function FooterLogo() {
 
 function FooterLogoContainer() {
   return (
-    <div className="absolute content-stretch flex h-[36px] items-center left-0 top-0 w-[282px]" data-name="Container">
+    <div className="content-stretch flex h-auto mb-6 items-center w-full" data-name="Container">
       <FooterLogo />
     </div>
   );
@@ -30,8 +30,8 @@ function FooterLogoContainer() {
 
 function FooterAboutText() {
   return (
-    <div className="absolute h-[95.188px] left-0 top-[52px] w-[282px]" data-name="p">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[23.8px] left-0 text-[14px] text-white top-0 w-[282px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div className="w-full mb-6" data-name="p">
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[23.8px] text-[14px] text-white w-full max-w-[282px]" style={{ fontVariationSettings: "'wdth' 100" }}>
         Your trusted personal caregiving service provider in Northwest Ohio. Providing compassionate, reliable care since our founding.
       </p>
     </div>
@@ -52,7 +52,7 @@ function IconFacebook() {
 
 function SocialLinkFacebook() {
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] relative rounded-[33554400px] shrink-0 size-[36px]" data-name="a">
+    <div className="bg-[rgba(255,255,255,0.1)] relative rounded-full shrink-0 size-[36px] cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-[rgba(255,255,255,0.2)]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
         <IconFacebook />
       </div>
@@ -81,7 +81,7 @@ function IconInstagram() {
 
 function SocialLinkInstagram() {
   return (
-    <div className="bg-[rgba(255,255,255,0.1)] relative rounded-[33554400px] shrink-0 size-[36px]" data-name="a">
+    <div className="bg-[rgba(255,255,255,0.1)] relative rounded-full shrink-0 size-[36px] cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-[rgba(255,255,255,0.2)]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
         <IconInstagram />
       </div>
@@ -91,7 +91,7 @@ function SocialLinkInstagram() {
 
 function SocialLinksContainer() {
   return (
-    <div className="absolute content-stretch flex gap-[12px] h-[36px] items-start left-0 top-[171.19px] w-[282px]" data-name="Container">
+    <div className="content-stretch flex gap-[12px] h-[36px] items-start w-full" data-name="Container">
       <SocialLinkFacebook />
       <SocialLinkInstagram />
     </div>
@@ -100,7 +100,7 @@ function SocialLinksContainer() {
 
 function FooterBrandColumn() {
   return (
-    <div className="col-1 h-[207.188px] justify-self-stretch relative row-1 shrink-0" data-name="Container">
+    <div className="flex flex-col items-start relative shrink-0 w-full md:w-[282px]" data-name="Container">
       <FooterLogoContainer />
       <FooterAboutText />
       <SocialLinksContainer />
@@ -118,8 +118,12 @@ function FooterColumnTitle_QuickLinks() {
 
 function FooterLink_Home() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div 
+      className="h-[24px] relative shrink-0 w-full cursor-pointer group" 
+      data-name="li"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    >
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white transition-all group-hover:translate-x-1" style={{ fontVariationSettings: "'wdth' 100" }}>
         Home
       </p>
     </div>
@@ -128,8 +132,12 @@ function FooterLink_Home() {
 
 function FooterLink_About() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div 
+      className="h-[24px] relative shrink-0 w-full cursor-pointer group" 
+      data-name="li"
+      onClick={() => document.getElementById('in-home-care')?.scrollIntoView({ behavior: 'smooth' })}
+    >
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white transition-all group-hover:translate-x-1" style={{ fontVariationSettings: "'wdth' 100" }}>
         About Us
       </p>
     </div>
@@ -138,8 +146,12 @@ function FooterLink_About() {
 
 function FooterLink_Services() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div 
+      className="h-[24px] relative shrink-0 w-full cursor-pointer group" 
+      data-name="li"
+      onClick={() => document.getElementById('services-overview')?.scrollIntoView({ behavior: 'smooth' })}
+    >
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white transition-all group-hover:translate-x-1" style={{ fontVariationSettings: "'wdth' 100" }}>
         Services
       </p>
     </div>
@@ -148,8 +160,12 @@ function FooterLink_Services() {
 
 function FooterLink_Youth() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div 
+      className="h-[24px] relative shrink-0 w-full cursor-pointer group" 
+      data-name="li"
+      onClick={() => document.getElementById('youth-programs')?.scrollIntoView({ behavior: 'smooth' })}
+    >
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white transition-all group-hover:translate-x-1" style={{ fontVariationSettings: "'wdth' 100" }}>
         Youth Programs
       </p>
     </div>
@@ -158,8 +174,12 @@ function FooterLink_Youth() {
 
 function FooterLink_Contact() {
   return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div 
+      className="h-[24px] relative shrink-0 w-full cursor-pointer group" 
+      data-name="li"
+      onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+    >
+      <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white transition-all group-hover:translate-x-1" style={{ fontVariationSettings: "'wdth' 100" }}>
         Contact
       </p>
     </div>
@@ -168,7 +188,7 @@ function FooterLink_Contact() {
 
 function FooterLinksList() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="ul">
       <FooterLink_Home />
       <FooterLink_About />
       <FooterLink_Services />
@@ -180,7 +200,7 @@ function FooterLinksList() {
 
 function FooterColumn_QuickLinks() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full sm:w-[200px]" data-name="Container">
       <FooterColumnTitle_QuickLinks />
       <FooterLinksList />
     </div>
@@ -195,71 +215,24 @@ function FooterColumnTitle_Services() {
   );
 }
 
-function FooterService_Respite() {
-  return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Respite Care
-      </p>
-    </div>
-  );
-}
-
-function FooterService_AdultDay() {
-  return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Adult Day Services
-      </p>
-    </div>
-  );
-}
-
-function FooterService_Community() {
-  return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Community Activities
-      </p>
-    </div>
-  );
-}
-
-function FooterService_Vocational() {
-  return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Vocational Rehab
-      </p>
-    </div>
-  );
-}
-
-function FooterService_Transportation() {
-  return (
-    <div className="h-[24px] relative shrink-0 w-full" data-name="li">
-      <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Transportation
-      </p>
-    </div>
-  );
-}
-
 function FooterServicesList() {
+  const services = ["Respite Care", "Adult Day Services", "Community Activities", "Vocational Rehab", "Transportation"];
   return (
-    <div className="content-stretch flex flex-col gap-[12px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
-      <FooterService_Respite />
-      <FooterService_AdultDay />
-      <FooterService_Community />
-      <FooterService_Vocational />
-      <FooterService_Transportation />
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-name="ul">
+      {services.map(s => (
+        <div key={s} className="h-[24px] relative shrink-0 w-full" data-name="li">
+          <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.6] text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+            {s}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }
 
 function FooterColumn_Services() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full sm:w-[200px]" data-name="Container">
       <FooterColumnTitle_Services />
       <FooterServicesList />
     </div>
@@ -274,37 +247,15 @@ function FooterColumnTitle_Contact() {
   );
 }
 
-function MapPin() {
+function MapPin_New() {
   return (
-    <div className="absolute left-0 size-[16px] top-[4px]" data-name="MapPin">
+    <div className="size-[16px] relative" data-name="MapPin">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="MapPin">
           <path d={svgPaths.p14548f00} id="Vector" stroke="var(--stroke-0, #F4A261)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
           <path d={svgPaths.p17781bc0} id="Vector_2" stroke="var(--stroke-0, #F4A261)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
         </g>
       </svg>
-    </div>
-  );
-}
-
-function FooterAddressText() {
-  return (
-    <div className="absolute font-['Open_Sans:Regular',sans-serif] font-normal h-[40px] leading-[20px] left-[28px] text-[14px] text-white top-0 w-[184.219px] whitespace-nowrap" data-name="span">
-      <p className="absolute left-0 top-0" style={{ fontVariationSettings: "'wdth' 100" }}>
-        5450 Oak Alley Ct.,
-      </p>
-      <p className="absolute left-0 top-[20px]" style={{ fontVariationSettings: "'wdth' 100" }}>
-        Suite 108, Toledo, OH 43606
-      </p>
-    </div>
-  );
-}
-
-function FooterContactInfo_Address() {
-  return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="li">
-      <MapPin />
-      <FooterAddressText />
     </div>
   );
 }
@@ -326,25 +277,6 @@ function IconPhone_Footer() {
   );
 }
 
-function FooterPhoneLink() {
-  return (
-    <div className="h-[20px] relative shrink-0 w-[96.453px]" data-name="a">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
-        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] not-italic relative shrink-0 text-[16px] text-white whitespace-nowrap">(419) 704-0316</p>
-      </div>
-    </div>
-  );
-}
-
-function FooterContactInfo_Phone() {
-  return (
-    <div className="content-stretch flex gap-[12px] h-[20px] items-center relative shrink-0 w-full" data-name="li">
-      <IconPhone_Footer />
-      <FooterPhoneLink />
-    </div>
-  );
-}
-
 function IconMail_Footer() {
   return (
     <div className="relative shrink-0 size-[16px]" data-name="Mail">
@@ -358,30 +290,9 @@ function IconMail_Footer() {
   );
 }
 
-function FooterEmailLink() {
+function IconClock_New() {
   return (
-    <div className="h-[20px] relative shrink-0 w-[208.641px]" data-name="a">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
-        <p className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-white whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
-          info@reliancecaresolutions.com
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function FooterContactInfo_Email() {
-  return (
-    <div className="content-stretch flex gap-[12px] h-[20px] items-center relative shrink-0 w-full" data-name="li">
-      <IconMail_Footer />
-      <FooterEmailLink />
-    </div>
-  );
-}
-
-function IconClock_Footer() {
-  return (
-    <div className="absolute left-0 size-[16px] top-[4px]" data-name="Clock">
+    <div className="size-[16px] relative" data-name="Clock">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g clipPath="url(#clip0_1_872)" id="Clock">
           <path d={svgPaths.p39ee6532} id="Vector" stroke="var(--stroke-0, #F4A261)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
@@ -397,51 +308,67 @@ function IconClock_Footer() {
   );
 }
 
+function FooterAddressText() {
+  return (
+    <div className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.4] text-[14px] text-white w-full" data-name="span">
+      <p className="" style={{ fontVariationSettings: "'wdth' 100" }}>
+        5450 Oak Alley Ct., Suite 108,
+      </p>
+      <p className="" style={{ fontVariationSettings: "'wdth' 100" }}>
+        Toledo, OH 43606
+      </p>
+    </div>
+  );
+}
+
 function FooterHoursText() {
   return (
-    <div className="absolute font-['Open_Sans:Regular',sans-serif] font-normal h-[40px] leading-[20px] left-[28px] text-[14px] text-white top-0 w-[135.234px] whitespace-nowrap" data-name="span">
-      <p className="absolute left-0 top-0" style={{ fontVariationSettings: "'wdth' 100" }}>
+    <div className="font-['Open_Sans:Regular',sans-serif] font-normal leading-[1.4] text-[14px] text-white w-full" data-name="span">
+      <p className="" style={{ fontVariationSettings: "'wdth' 100" }}>
         Mon - Fri: 9am - 5pm
       </p>
-      <p className="absolute left-0 top-[20px]" style={{ fontVariationSettings: "'wdth' 100" }}>
+      <p className="" style={{ fontVariationSettings: "'wdth' 100" }}>
         Emergency: 24/7
       </p>
     </div>
   );
 }
 
-function FooterContactInfo_Hours() {
-  return (
-    <div className="h-[40px] relative shrink-0 w-full" data-name="li">
-      <IconClock_Footer />
-      <FooterHoursText />
-    </div>
-  );
-}
-
 function FooterContactList() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
-      <FooterContactInfo_Address />
-      <FooterContactInfo_Phone />
-      <FooterContactInfo_Email />
-      <FooterContactInfo_Hours />
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-name="ul">
+      <div className="flex gap-[12px] items-start w-full">
+        <div className="mt-1 shrink-0"><MapPin_New /></div>
+        <FooterAddressText />
+      </div>
+      <div className="flex gap-[12px] items-center w-full">
+        <IconPhone_Footer />
+        <p className="text-[14px] text-white">(419) 704-0316</p>
+      </div>
+      <div className="flex gap-[12px] items-center w-full">
+        <IconMail_Footer />
+        <p className="text-[14px] text-white">info@reliancecaresolutions.com</p>
+      </div>
+      <div className="flex gap-[12px] items-start w-full">
+        <div className="mt-1 shrink-0"><IconClock_New /></div>
+        <FooterHoursText />
+      </div>
     </div>
   );
 }
 
 function FooterColumn_Contact() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full sm:w-[240px]" data-name="Container">
       <FooterColumnTitle_Contact />
       <FooterContactList />
     </div>
   );
 }
 
-function FooterNavColumnsGrid() {
+function FooterNavWrapper() {
   return (
-    <div className="content-stretch flex gap-[40px] items-center justify-end relative shrink-0">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[40px] w-full lg:w-auto">
       <FooterColumn_QuickLinks />
       <FooterColumn_Services />
       <FooterColumn_Contact />
@@ -449,29 +376,13 @@ function FooterNavColumnsGrid() {
   );
 }
 
-function FooterNavWrapper() {
-  return (
-    <div className="col-2 content-stretch flex items-center justify-end justify-self-start relative row-1 self-start shrink-0">
-      <FooterNavColumnsGrid />
-    </div>
-  );
-}
-
-function FooterColumnsGrid() {
-  return (
-    <div className="gap-x-[40px] gap-y-[40px] grid grid-cols-[repeat(4,minmax(0,1fr))] grid-rows-[repeat(1,minmax(0,1fr))] h-[207.188px] relative shrink-0 w-[1248px]" data-name="div">
-      <FooterBrandColumn />
-      <FooterNavWrapper />
-    </div>
-  );
-}
-
 function FooterMain() {
   return (
-    <div className="relative shrink-0 w-full" data-name="Top">
-      <div className="overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex flex-col items-start px-[100px] py-[60px] relative size-full">
-          <FooterColumnsGrid />
+    <div className="relative shrink-0 w-full overflow-hidden" data-name="Top">
+      <div className="content-stretch flex flex-col px-4 md:px-8 lg:px-[100px] py-[60px] md:py-[100px] relative w-full items-center">
+        <div className="flex flex-col lg:flex-row justify-between gap-[60px] w-full max-w-[1240px]">
+          <FooterBrandColumn />
+          <FooterNavWrapper />
         </div>
       </div>
     </div>
@@ -489,19 +400,19 @@ function List() {
 
 function FooterCopyright() {
   return (
-    <div className="relative shrink-0 w-[1440px]" data-name="Copyright">
-      <div className="content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[1.6] not-italic overflow-clip px-[120px] py-[32px] relative rounded-[inherit] size-full text-[14px] text-white whitespace-nowrap">
-        <p className="opacity-70 relative shrink-0 text-right">Copyright© 2026. Reliance Care Solutions. All Right Reserved.</p>
+    <div className="relative shrink-0 w-full" data-name="Copyright">
+      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.24)] border-solid border-t inset-x-0 top-0 pointer-events-none" />
+      <div className="content-stretch flex flex-col md:flex-row font-['Inter:Regular',sans-serif] font-normal items-center justify-between gap-6 px-4 md:px-8 lg:px-[120px] py-[32px] relative w-full h-auto text-[14px] text-white">
+        <p className="opacity-70 text-center md:text-left">Copyright© 2026. Reliance Care Solutions. All Right Reserved.</p>
         <List />
       </div>
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.24)] border-solid border-t inset-0 pointer-events-none" />
     </div>
   );
 }
 
 export function FooterSection() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#00766a] content-stretch flex flex-col items-center left-1/2 overflow-clip top-[7321px] w-[1440px]" data-name="Footer">
+    <div className="bg-[#00766a] content-stretch flex flex-col items-center overflow-x-hidden relative w-full" data-name="Footer">
       <FooterMain />
       <FooterCopyright />
     </div>

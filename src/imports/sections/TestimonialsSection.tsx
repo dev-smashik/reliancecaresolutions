@@ -1,3 +1,4 @@
+import { useState } from "react";
 import imgEllipse1086 from "figma:asset/testimonial-1.png";
 import imgEllipse1087 from "figma:asset/testimonial-2.png";
 import imgEllipse1088 from "figma:asset/testimonial-3.png";
@@ -547,23 +548,39 @@ function TestimonialRow_2() {
 
 function TestimonialsGridContainer() {
   return (
-    <div className="content-stretch flex gap-[16px] h-[786px] items-start relative shrink-0 w-full">
-      <TestimonialRow_4 />
-      <TestimonialRow_3 />
-      <TestimonialRow_1 />
-      <TestimonialRow_2 />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[24px] w-full relative">
+      <TestimonialCard_1 />
+      <TestimonialCard_2 />
+      <TestimonialCard_3 />
+      <TestimonialCard_4 />
+      <TestimonialCard_5 />
+      <TestimonialCard_6 />
+      <TestimonialCard_7 />
+      <TestimonialCard_8 />
+      <TestimonialCard_9 />
+      <TestimonialCard_10 />
+      <TestimonialCard_11 />
+      <TestimonialCard_12 />
+      <TestimonialCard_13 />
+      <TestimonialCard_14 />
+      <TestimonialCard_15 />
+      <TestimonialCard_16 />
     </div>
   );
 }
 
-function TestimonialsInner() {
+function TestimonialsInner({ isExpanded }: { isExpanded: boolean }) {
   return (
-    <div className="bg-white h-[1144px] relative shrink-0 w-full" data-name="Desktop - 14">
-      <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
-        <div className="content-stretch flex flex-col gap-[60px] items-center px-[100px] py-[120px] relative size-full">
-          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[64px] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[48px] text-center tracking-[0.12px] w-[min-content]">See what our members are saying</p>
-          <TestimonialsGridContainer />
-          <div className="absolute bg-gradient-to-b bottom-0 from-[rgba(255,255,255,0)] h-[192px] left-0 to-white w-[1440px]" />
+    <div className={`bg-white relative shrink-0 w-full overflow-hidden`} data-name="Desktop - 14">
+      <div className="flex flex-col items-center w-full">
+        <div className="content-stretch flex flex-col gap-[40px] md:gap-[60px] items-center px-4 md:px-8 lg:px-[100px] py-[60px] md:py-[120px] relative w-full max-w-[1440px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.2] md:leading-[64px] not-italic relative shrink-0 text-[#171a1b] text-[32px] md:text-[48px] text-center tracking-[0.12px] w-full">See what our members are saying</p>
+          <div className={`transition-all duration-700 ease-in-out w-full relative ${isExpanded ? 'max-h-[5000px]' : 'max-h-[600px] md:max-h-[800px] overflow-hidden'}`}>
+            <TestimonialsGridContainer />
+            {!isExpanded && (
+              <div className="absolute bg-gradient-to-b bottom-0 from-transparent h-[200px] md:h-[300px] left-0 to-white w-full pointer-events-none z-10" />
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -571,12 +588,18 @@ function TestimonialsInner() {
 }
 
 export function TestimonialsSection() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[44px] h-[1292px] items-center left-1/2 top-[5159px] w-[1440px]">
-      <TestimonialsInner />
-      <div className="bg-[#ff7865] content-stretch flex h-[54px] items-center justify-center px-[16px] relative rounded-br-[24px] rounded-tl-[24px] shrink-0" data-name="Button/Default/Rounded">
+    <div id="testimonials" className="content-stretch flex flex-col gap-[32px] md:gap-[44px] items-center relative w-full pb-[60px] md:pb-[80px]">
+      <TestimonialsInner isExpanded={isExpanded} />
+      <div
+        className="bg-[#ff7865] content-stretch flex h-[54px] items-center justify-center px-[32px] relative rounded-br-[24px] rounded-tl-[24px] shrink-0 cursor-pointer transition-all duration-300 hover:scale-105 active:scale-95 hover:brightness-110 shadow-sm hover:shadow-md z-20"
+        data-name="Button/Default/Rounded"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
         <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap">
-          <p className="leading-[1.6]">Show More →</p>
+          <p className="leading-[1.6]">{isExpanded ? 'Show Less ↑' : 'Show More →'}</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
-import { NavbarInner } from "./sections/Navbar";
+import { TopBar } from "./sections/TopBar";
+import { Navbar } from "./sections/Navbar";
 import { HeroSection } from "./sections/HeroSection";
 import { SupportAdviceSection } from "./sections/SupportAdviceSection";
 import { InHomeCareSection } from "./sections/InHomeCareSection";
@@ -11,8 +12,9 @@ import { FooterSection } from "./sections/FooterSection";
 
 export default function LandingPage() {
   return (
-    <div className="bg-white relative size-full" data-name="Landing Page">
-      <NavbarInner />
+    <div className="bg-white flex flex-col items-center min-h-screen relative w-full overflow-hidden" data-name="Landing Page">
+      <TopBar />
+      <Navbar />
       <HeroSection />
       <SupportAdviceSection />
       <InHomeCareSection />

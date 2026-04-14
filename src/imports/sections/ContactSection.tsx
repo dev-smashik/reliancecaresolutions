@@ -2,11 +2,11 @@ import svgPaths from "../svgPaths";
 
 function ContactTitle() {
   return (
-    <div className="content-stretch flex flex-col gap-[32px] items-start justify-center not-italic relative shrink-0 w-[527px]">
-      <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#171a1b] text-[0px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] tracking-[-0.3px] w-full">
-        <p className="text-[60px]">
-          <span className="leading-[64px]">{`Connect with our team to `}</span>
-          <span className="font-['Instrument_Serif:Italic',sans-serif] italic leading-[64px] text-[#00766a] tracking-[-0.3px]">explore solutions.</span>
+    <div className="content-stretch flex flex-col gap-[16px] md:gap-[32px] items-start justify-center not-italic relative shrink-0 w-full lg:max-w-[527px]">
+      <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[1.1] relative shrink-0 text-[#171a1b] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] tracking-[-0.3px] w-full">
+        <p className="text-[36px] md:text-[60px]">
+          <span className="">{`Connect with our team to `}</span>
+          <span className="font-['Instrument_Serif:Italic',sans-serif] italic text-[#00766a] tracking-[-0.3px]">explore solutions.</span>
         </p>
       </div>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[#636768] text-[16px] w-full">We’re here to answer your questions and support your needs.</p>
@@ -40,16 +40,16 @@ function ContactIcon_Email() {
 
 function ContactDetail_Email() {
   return (
-    <div className="content-stretch flex flex-col items-start leading-[1.6] not-italic relative shrink-0 text-[#171a1b] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[20px] w-full">Email</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[16px] w-full">info@reliancecaresolutions.com</p>
+    <div className="content-stretch flex flex-col items-start not-italic relative shrink-0 text-[#171a1b] w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[20px] leading-[1.4] shrink-0">Email</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal text-[16px] sm:text-[14px] md:text-[16px] leading-[1.4] shrink-0 opacity-100 break-all">info@reliancecaresolutions.com</p>
     </div>
   );
 }
 
 function ContactCard_Email() {
   return (
-    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[200px] shrink-0 w-[274px]">
+    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[20px] shrink-0 w-full sm:w-auto sm:flex-1 h-auto min-h-[148px]">
       <ContactIcon_Email />
       <ContactDetail_Email />
     </div>
@@ -85,16 +85,16 @@ function ContactIcon_Phone() {
 
 function ContactDetail_Phone() {
   return (
-    <div className="content-stretch flex flex-col items-start leading-[1.6] not-italic relative shrink-0 text-[#171a1b] w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[20px] w-full">Phone</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal relative shrink-0 text-[16px] w-full">(419) 704-0316</p>
+    <div className="content-stretch flex flex-col items-start not-italic relative shrink-0 text-[#171a1b] w-full">
+      <p className="font-['Inter:Medium',sans-serif] font-medium text-[20px] leading-[1.4] shrink-0">Phone</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal text-[16px] leading-[1.4] shrink-0 opacity-100">(419) 704-0316</p>
     </div>
   );
 }
 
 function ContactCard_Phone() {
   return (
-    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[200px] shrink-0 w-[274px]">
+    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[20px] shrink-0 w-full sm:w-auto sm:flex-1 h-auto min-h-[148px]">
       <ContactIcon_Phone />
       <ContactDetail_Phone />
     </div>
@@ -103,7 +103,7 @@ function ContactCard_Phone() {
 
 function ContactCardsRow() {
   return (
-    <div className="content-stretch flex gap-[16px] items-start justify-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] items-start relative shrink-0 w-full">
       <ContactCard_Email />
       <ContactCard_Phone />
     </div>
@@ -112,7 +112,7 @@ function ContactCardsRow() {
 
 function ContactTextWrapper() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[109px] items-start left-[101px] top-[155px] w-[564px]">
+    <div className="content-stretch flex flex-col gap-[40px] md:gap-[90px] items-start w-full lg:max-w-[564px] relative">
       <ContactTitle />
       <ContactCardsRow />
     </div>
@@ -122,28 +122,27 @@ function ContactTextWrapper() {
 function ContactFormTitle() {
   return (
     <div className="content-stretch flex flex-col gap-[6px] items-start leading-[1.6] not-italic relative shrink-0 w-full">
-      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#171a1b] text-[24px] whitespace-nowrap">Tell us what you need</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full relative shrink-0 text-[#777] text-[16px] w-[min-content]">Our team is ready to assist you with every detail.</p>
+      <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#171a1b] text-[24px]">Tell us what you need</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal min-w-full relative shrink-0 text-[#777] text-[16px]">Our team is ready to assist you with every detail.</p>
     </div>
   );
 }
 
 function FormInput_Name() {
   return (
-    <div className="relative rounded-[10px] shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
-      <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center px-[12px] py-[16px] relative size-full">
-          <p className="font-['Rubik:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[#777] text-[16px] whitespace-nowrap">Full name</p>
-        </div>
-      </div>
+    <div className="relative rounded-[10px] shrink-0 w-full overflow-hidden bg-[#f8fcfb] border border-[rgba(61,61,61,0.1)] focus-within:border-[#00766a] focus-within:ring-2 focus-within:ring-[#00766a]/20 transition-all duration-300">
+      <input 
+        type="text"
+        placeholder="Full name"
+        className="w-full px-[16px] py-[16px] font-['Rubik:Regular',sans-serif] text-[16px] text-[#171a1b] placeholder-[#777] outline-none bg-transparent"
+      />
     </div>
   );
 }
 
 function FormField_Name() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative">
+    <div className="content-stretch flex w-full sm:flex-[1_0_0] flex-col gap-[12px] items-start relative">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">Full Name</p>
       <FormInput_Name />
     </div>
@@ -152,20 +151,19 @@ function FormField_Name() {
 
 function FormInput_Phone() {
   return (
-    <div className="relative rounded-[10px] shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
-      <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center px-[12px] py-[16px] relative size-full">
-          <p className="font-['Rubik:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[16px] text-[rgba(26,26,46,0.5)] whitespace-nowrap">(419) 000-0000</p>
-        </div>
-      </div>
+    <div className="relative rounded-[10px] shrink-0 w-full overflow-hidden bg-[#f8fcfb] border border-[rgba(61,61,61,0.1)] focus-within:border-[#00766a] focus-within:ring-2 focus-within:ring-[#00766a]/20 transition-all duration-300">
+      <input 
+        type="tel"
+        placeholder="(419) 000-0000"
+        className="w-full px-[16px] py-[16px] font-['Rubik:Regular',sans-serif] text-[16px] text-[#171a1b] placeholder-[#777] outline-none bg-transparent"
+      />
     </div>
   );
 }
 
 function FormField_Phone() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative">
+    <div className="content-stretch flex w-full sm:flex-[1_0_0] flex-col gap-[12px] items-start relative">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">Phone Number</p>
       <FormInput_Phone />
     </div>
@@ -174,7 +172,7 @@ function FormField_Phone() {
 
 function FormRow_NamePhone() {
   return (
-    <div className="content-stretch flex gap-[30px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] md:gap-[30px] items-center relative shrink-0 w-full">
       <FormField_Name />
       <FormField_Phone />
     </div>
@@ -183,13 +181,12 @@ function FormRow_NamePhone() {
 
 function FormInput_Email() {
   return (
-    <div className="relative rounded-[10px] shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
-      <div className="flex flex-row items-center size-full">
-        <div className="content-stretch flex items-center px-[12px] py-[16px] relative size-full">
-          <p className="font-['Rubik:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[#777] text-[16px] whitespace-nowrap">yourname@email.com</p>
-        </div>
-      </div>
+    <div className="relative rounded-[10px] shrink-0 w-full overflow-hidden bg-[#f8fcfb] border border-[rgba(61,61,61,0.1)] focus-within:border-[#00766a] focus-within:ring-2 focus-within:ring-[#00766a]/20 transition-all duration-300">
+      <input 
+        type="email"
+        placeholder="yourname@email.com"
+        className="w-full px-[16px] py-[16px] font-['Rubik:Regular',sans-serif] text-[16px] text-[#171a1b] placeholder-[#777] outline-none bg-transparent"
+      />
     </div>
   );
 }
@@ -205,18 +202,18 @@ function FormField_Email() {
 
 function FormInput_Message() {
   return (
-    <div className="h-[124px] relative rounded-[10px] shrink-0 w-full">
-      <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
-      <div className="content-stretch flex items-start px-[12px] py-[16px] relative size-full">
-        <p className="font-['Rubik:Regular',sans-serif] font-normal leading-[1.6] relative shrink-0 text-[#777] text-[16px] whitespace-nowrap">Tell us about your needs...</p>
-      </div>
+    <div className="relative rounded-[10px] shrink-0 w-full overflow-hidden bg-[#f8fcfb] border border-[rgba(61,61,61,0.1)] focus-within:border-[#00766a] focus-within:ring-2 focus-within:ring-[#00766a]/20 transition-all duration-300">
+      <textarea 
+        placeholder="Tell us about your needs..."
+        className="w-full min-h-[140px] px-[16px] py-[16px] font-['Rubik:Regular',sans-serif] text-[16px] text-[#171a1b] placeholder-[#777] outline-none bg-transparent resize-none"
+      />
     </div>
   );
 }
 
 function FormField_Message() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] h-[158px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">How can we help you?</p>
       <FormInput_Message />
     </div>
@@ -225,7 +222,7 @@ function FormField_Message() {
 
 function FormFieldsGrid() {
   return (
-    <div className="content-stretch flex flex-col gap-[30px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[20px] md:gap-[30px] items-start relative shrink-0 w-full">
       <FormRow_NamePhone />
       <FormField_Email />
       <FormField_Message />
@@ -235,11 +232,14 @@ function FormFieldsGrid() {
 
 function ContactFormCard() {
   return (
-    <div className="-translate-x-1/2 absolute bg-white content-stretch flex flex-col gap-[32px] items-start left-[calc(50%+329.5px)] p-[24px] rounded-[20px] top-[143px] w-[541px]">
-      <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[20px]" />
+    <div className="bg-white content-stretch flex flex-col gap-[36px] items-start p-[32px] md:p-[48px] rounded-[24px] relative w-full lg:max-w-[541px] shadow-[0_20px_40px_rgba(0,118,106,0.1)] border border-[rgba(0,118,106,0.1)] transition-transform hover:-translate-y-1 duration-300">
       <ContactFormTitle />
       <FormFieldsGrid />
-      <div className="bg-[#00766a] h-[54px] relative rounded-[200px] shrink-0 w-full" data-name="Button/Default/Rounded">
+      <div 
+        className="bg-gradient-to-r from-[#00766a] to-[#2a9d8f] h-[54px] relative rounded-[200px] shrink-0 w-full cursor-pointer transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_8px_20px_rgba(0,118,106,0.25)] shadow-md" 
+        data-name="Button/Default/Rounded"
+        onClick={() => alert('Thank you for your message! Our team will get back to you soon.')}
+      >
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex items-center justify-center px-[16px] relative size-full">
             <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap">
@@ -254,9 +254,11 @@ function ContactFormCard() {
 
 export function ContactSection() {
   return (
-    <div className="-translate-x-1/2 absolute bg-white h-[870px] left-1/2 overflow-clip top-[6451px] w-[1440px]" data-name="Desktop - 15">
-      <ContactTextWrapper />
-      <ContactFormCard />
+    <div id="contact" className="bg-white flex justify-center px-4 md:px-8 lg:px-[100px] py-[60px] md:py-[120px] relative w-full overflow-hidden" data-name="Desktop - 15">
+      <div className="w-full max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-[60px]">
+        <ContactTextWrapper />
+        <ContactFormCard />
+      </div>
     </div>
   );
 }
