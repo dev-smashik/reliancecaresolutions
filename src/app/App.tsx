@@ -1,25 +1,25 @@
-import svgPaths from "../imports/svg-aga04d3mpk";
+import svgPaths from "../imports/svgPaths";
 import imgRelianceCareSolutionsLogo1 from "figma:asset/reliance-logo.png";
-import imgFrame48096693 from "figma:asset/hero-care-1.png";
-import imgFrame48096694 from "figma:asset/hero-care-2.png";
-import imgFrame48096695 from "figma:asset/in-home-services.png";
-import imgFrame48096696 from "figma:asset/youth-programs.png";
-import imgEllipse1 from "figma:asset/avatar-hero-1.png";
-import imgEllipse2 from "figma:asset/avatar-hero-2.png";
-import imgEllipse3 from "figma:asset/avatar-hero-3.png";
-import imgEllipse4 from "figma:asset/avatar-hero-4.png";
-import imgEllipse1086 from "figma:asset/testimonial-1.png";
-import imgEllipse1087 from "figma:asset/testimonial-2.png";
-import imgEllipse1088 from "figma:asset/testimonial-3.png";
-import imgEllipse1089 from "figma:asset/testimonial-4.png";
-import imgEllipse1090 from "figma:asset/testimonial-5.png";
-import imgEllipse1091 from "figma:asset/testimonial-6.png";
-import imgEllipse1092 from "figma:asset/testimonial-7.png";
-import imgEllipse1093 from "figma:asset/testimonial-8.png";
-import imgEllipse1094 from "figma:asset/testimonial-9.png";
-import imgEllipse1095 from "figma:asset/testimonial-10.png";
-import imgEllipse1096 from "figma:asset/testimonial-11.png";
-import imgEllipse1097 from "figma:asset/testimonial-12.png";
+import imgHeroCare1 from "figma:asset/hero-care-1.png";
+import imgHeroCare2 from "figma:asset/hero-care-2.png";
+import imgInHomeCare from "figma:asset/in-home-services.png";
+import imgYouthProgram from "figma:asset/youth-programs.png";
+import imgAvatarHero1 from "figma:asset/avatar-hero-1.png";
+import imgAvatarHero2 from "figma:asset/avatar-hero-2.png";
+import imgAvatarHero3 from "figma:asset/avatar-hero-3.png";
+import imgAvatarHero4 from "figma:asset/avatar-hero-4.png";
+import imgTestimonial1 from "figma:asset/testimonial-1.png";
+import imgTestimonial2 from "figma:asset/testimonial-2.png";
+import imgTestimonial3 from "figma:asset/testimonial-3.png";
+import imgTestimonial4 from "figma:asset/testimonial-4.png";
+import imgTestimonial5 from "figma:asset/testimonial-5.png";
+import imgTestimonial6 from "figma:asset/testimonial-6.png";
+import imgTestimonial7 from "figma:asset/testimonial-7.png";
+import imgTestimonial8 from "figma:asset/testimonial-8.png";
+import imgTestimonial9 from "figma:asset/testimonial-9.png";
+import imgTestimonial10 from "figma:asset/testimonial-10.png";
+import imgTestimonial11 from "figma:asset/testimonial-11.png";
+import imgTestimonial12 from "figma:asset/testimonial-12.png";
 import { useState } from "react";
 
 /* ─── Top Bar ─── */
@@ -121,7 +121,7 @@ function HeroSection() {
         <p className="mt-2 font-['Inter',sans-serif] font-normal text-[14px] sm:text-[16px] leading-[24px] text-[#8e8e8e] text-center max-w-[724px]">Professional home care services and direct support caregivers for your loved ones in the Toledo area delivered with a customized, personal approach.</p>
         <div className="mt-4 flex items-center gap-2">
           <div className="flex items-center">
-            {[imgEllipse1, imgEllipse2, imgEllipse3, imgEllipse4].map((img, i) => (
+            {[imgAvatarHero1, imgAvatarHero2, imgAvatarHero3, imgAvatarHero4].map((img, i) => (
               <img key={i} alt="" className="size-[46px] rounded-full border-2 border-white" style={{ marginLeft: i > 0 ? "-23px" : 0 }} src={img} />
             ))}
           </div>
@@ -133,7 +133,7 @@ function HeroSection() {
       </div>
       {/* Image strip */}
       <div className="flex justify-center gap-4 lg:gap-6 mt-4 px-4 overflow-hidden">
-        {[imgFrame48096693, imgFrame48096694, imgFrame48096695, imgFrame48096696].map((img, i) => (
+        {[imgHeroCare1, imgHeroCare2, imgInHomeCare, imgYouthProgram].map((img, i) => (
           <div key={i} className="w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] lg:w-[430px] lg:h-[430px] shrink-0 rounded-none overflow-hidden">
             <img alt="" className="w-full h-full object-cover" src={img} />
           </div>
@@ -171,7 +171,7 @@ function InHomeServicesSection() {
           </div>
         </div>
         <div className="w-full lg:w-[622px] h-[300px] sm:h-[400px] lg:h-[548px] rounded-[16px] overflow-hidden shrink-0">
-          <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgFrame48096695} />
+          <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgInHomeCare} />
         </div>
       </div>
     </div>
@@ -373,7 +373,7 @@ function YouthProgramsSection() {
           </div>
         </div>
         <div className="w-full lg:w-[568px] h-[350px] sm:h-[450px] lg:h-[654px] rounded-[16px] overflow-hidden shrink-0">
-          <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgFrame48096696} />
+          <img alt="" className="w-full h-full object-cover rounded-[16px]" src={imgYouthProgram} />
         </div>
       </div>
     </div>
@@ -398,18 +398,18 @@ function TestimonialCard({ name, img, text }: { name: string; img: string; text:
 
 function TestimonialsSection() {
   const testimonials = [
-    { name: "Cameron Williamson", img: imgEllipse1086, text: "Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life." },
-    { name: "Wanda Maximoff", img: imgEllipse1087, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
-    { name: "Natasha Romanoff", img: imgEllipse1088, text: "Highly recommended! This product exceeded my expectations in every way." },
-    { name: "Harleen Quinzel", img: imgEllipse1089, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
-    { name: "Carol Danvers", img: imgEllipse1090, text: "Highly recommended! This product exceeded my expectations in every way." },
-    { name: "Juan Attwood", img: imgEllipse1091, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
-    { name: "Alan Carrington", img: imgEllipse1092, text: "Highly recommended! This product exceeded my expectations in every way." },
-    { name: "Brian Bargeman", img: imgEllipse1093, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
-    { name: "Brendan Carroll", img: imgEllipse1094, text: "Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life." },
-    { name: "Zhanatan Donaldson", img: imgEllipse1095, text: "Highly recommended! This product exceeded my expectations in every way." },
-    { name: "Kaden Fane", img: imgEllipse1096, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
-    { name: "Samuel Moore", img: imgEllipse1097, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Cameron Williamson", img: imgTestimonial1, text: "Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life." },
+    { name: "Wanda Maximoff", img: imgTestimonial2, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Natasha Romanoff", img: imgTestimonial3, text: "Highly recommended! This product exceeded my expectations in every way." },
+    { name: "Harleen Quinzel", img: imgTestimonial4, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Carol Danvers", img: imgTestimonial5, text: "Highly recommended! This product exceeded my expectations in every way." },
+    { name: "Juan Attwood", img: imgTestimonial6, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Alan Carrington", img: imgTestimonial7, text: "Highly recommended! This product exceeded my expectations in every way." },
+    { name: "Brian Bargeman", img: imgTestimonial8, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Brendan Carroll", img: imgTestimonial9, text: "Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life." },
+    { name: "Zhanatan Donaldson", img: imgTestimonial10, text: "Highly recommended! This product exceeded my expectations in every way." },
+    { name: "Kaden Fane", img: imgTestimonial11, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
+    { name: "Samuel Moore", img: imgTestimonial12, text: "Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression." },
   ];
 
   return (

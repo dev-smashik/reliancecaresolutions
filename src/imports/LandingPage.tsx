@@ -1,9 +1,9 @@
-import svgPaths from "./svg-aga04d3mpk";
+import svgPaths from "./svgPaths";
 import imgRelianceCareSolutionsLogo1 from "figma:asset/reliance-logo.png";
-import imgFrame48096693 from "figma:asset/hero-care-1.png";
-import imgFrame48096694 from "figma:asset/hero-care-2.png";
-import imgFrame48096695 from "figma:asset/in-home-services.png";
-import imgFrame48096696 from "figma:asset/youth-programs.png";
+import imgHeroCare1 from "figma:asset/hero-care-1.png";
+import imgHeroCare2 from "figma:asset/hero-care-2.png";
+import imgInHomeCare from "figma:asset/in-home-services.png";
+import imgYouthProgram from "figma:asset/youth-programs.png";
 import imgEllipse1 from "figma:asset/avatar-hero-1.png";
 import imgEllipse2 from "figma:asset/avatar-hero-2.png";
 import imgEllipse3 from "figma:asset/avatar-hero-3.png";
@@ -38,7 +38,7 @@ function Logo() {
   );
 }
 
-function Frame22() {
+function HomeMenuItem() {
   return (
     <div className="content-stretch flex items-center relative shrink-0">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#171a1b] text-[16px] whitespace-nowrap">Home</p>
@@ -46,7 +46,7 @@ function Frame22() {
   );
 }
 
-function Frame24() {
+function YouthProgramsMenuItem() {
   return (
     <div className="content-stretch flex items-center relative shrink-0">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#171a1b] text-[16px] whitespace-nowrap">Youth Programs</p>
@@ -54,7 +54,7 @@ function Frame24() {
   );
 }
 
-function Frame23() {
+function NavGroup() {
   return (
     <div className="content-stretch flex font-['Inter:Regular',sans-serif] font-normal gap-[8px] items-center leading-[24px] not-italic relative shrink-0 text-[#171a1b] text-[16px] whitespace-nowrap">
       <p className="relative shrink-0">About us</p>
@@ -66,15 +66,15 @@ function Frame23() {
 function Menu() {
   return (
     <div className="content-stretch flex gap-[36px] items-center relative shrink-0" data-name="Menu">
-      <Frame22 />
-      <Frame24 />
-      <Frame23 />
+      <HomeMenuItem />
+      <YouthProgramsMenuItem />
+      <NavGroup />
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#171a1b] text-[16px] whitespace-nowrap">Contact</p>
     </div>
   );
 }
 
-function Frame42() {
+function NavbarInner() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-[1240px]">
       <Logo />
@@ -103,68 +103,68 @@ function Frame42() {
 function Navbar() {
   return (
     <div className="absolute backdrop-blur-[10px] content-stretch flex h-[82px] items-center justify-between left-0 px-[20px] py-[12px] top-0 w-[1440px]" data-name="Navbar">
-      <Frame42 />
+      <NavbarInner />
     </div>
   );
 }
 
-function Frame43() {
+function HeroImage1() {
   return (
     <div className="relative shrink-0 size-[430px]">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-[#ddd] inset-0" />
         <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-full left-[-25%] max-w-none top-0 w-[150%]" src={imgFrame48096693} />
+          <img alt="" className="absolute h-full left-[-25%] max-w-none top-0 w-[150%]" src={imgHeroCare1} />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame44() {
+function HeroImage2() {
   return (
     <div className="relative shrink-0 size-[430px]">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-[#ddd] inset-0" />
         <div className="absolute inset-0 overflow-hidden">
-          <img alt="" className="absolute h-full left-[-58.37%] max-w-none top-0 w-[177.78%]" src={imgFrame48096694} />
+          <img alt="" className="absolute h-full left-[-58.37%] max-w-none top-0 w-[177.78%]" src={imgHeroCare2} />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame45() {
+function HeroImage3() {
   return (
     <div className="relative shrink-0 size-[430px]">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame48096695} />
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgInHomeCare} />
     </div>
   );
 }
 
-function Frame46() {
+function HeroImage4() {
   return (
     <div className="relative shrink-0 size-[430px]">
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-[#ddd] inset-0" />
-        <img alt="" className="absolute max-w-none object-cover size-full" src={imgFrame48096696} />
+        <img alt="" className="absolute max-w-none object-cover size-full" src={imgYouthProgram} />
       </div>
     </div>
   );
 }
 
-function Frame47() {
+function HeroImageRow() {
   return (
     <div className="-translate-x-1/2 absolute content-stretch flex gap-[24px] items-center left-1/2 top-[547px]">
-      <Frame43 />
-      <Frame44 />
-      <Frame45 />
-      <Frame46 />
+      <HeroImage1 />
+      <HeroImage2 />
+      <HeroImage3 />
+      <HeroImage4 />
     </div>
   );
 }
 
-function Frame25() {
+function CertBadge() {
   return (
     <div className="content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[200px] shrink-0 w-[284px]" style={{ backgroundImage: "linear-gradient(90deg, rgba(241, 250, 254, 0) 0%, rgb(241, 250, 254) 34.782%, rgb(241, 250, 254) 63.285%, rgba(241, 250, 254, 0) 100%)" }}>
       <div className="flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#00766a] text-[14px] tracking-[1.4px] uppercase whitespace-nowrap">
@@ -174,10 +174,10 @@ function Frame25() {
   );
 }
 
-function Frame49() {
+function HeroTextContent() {
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-center relative shrink-0">
-      <Frame25 />
+      <CertBadge />
       <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#171a1b] text-[60px] text-center tracking-[-0.3px] w-[1026px] whitespace-pre-wrap">
         <p className="leading-[64px] mb-0">{`Compassionate Care for `}</p>
         <p>
@@ -190,7 +190,7 @@ function Frame49() {
   );
 }
 
-function Group() {
+function AvatarStack() {
   return (
     <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
       <div className="col-1 ml-0 mt-0 relative row-1 size-[46px]">
@@ -209,7 +209,7 @@ function Group() {
   );
 }
 
-function Frame1() {
+function TrustText() {
   return (
     <div className="h-full relative shrink-0">
       <div className="flex flex-row items-center justify-center size-full">
@@ -221,22 +221,22 @@ function Frame1() {
   );
 }
 
-function Frame48() {
+function TrustRow() {
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0">
-      <Group />
+      <AvatarStack />
       <div className="flex flex-row items-center self-stretch">
-        <Frame1 />
+        <TrustText />
       </div>
     </div>
   );
 }
 
-function Frame50() {
+function HeroMainContent() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0">
-      <Frame49 />
-      <Frame48 />
+      <HeroTextContent />
+      <TrustRow />
       <div className="bg-[#ff7865] content-stretch flex h-[54px] items-center justify-center px-[16px] relative rounded-br-[24px] rounded-tl-[24px] shrink-0 w-[160px]" data-name="Button/Default/Rounded">
         <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap">
           <p className="leading-[1.6]">Apply Now →</p>
@@ -246,33 +246,33 @@ function Frame50() {
   );
 }
 
-function Frame18() {
+function HeroWrapper() {
   return (
     <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center left-1/2 top-[-40px]">
-      <Frame50 />
+      <HeroMainContent />
     </div>
   );
 }
 
-function Frame20() {
+function HeroContainer() {
   return (
     <div className="-translate-x-1/2 absolute h-[338px] left-1/2 top-[170px] w-[1200px]">
-      <Frame18 />
+      <HeroWrapper />
     </div>
   );
 }
 
-function Desktop() {
+function HeroSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-white h-[1030px] left-1/2 overflow-clip top-[36px] w-[1440px]" data-name="Desktop - 1">
       <Navbar />
-      <Frame47 />
-      <Frame20 />
+      <HeroImageRow />
+      <HeroContainer />
     </div>
   );
 }
 
-function Span() {
+function TopBarSlogan() {
   return (
     <div className="h-[20px] relative shrink-0 w-[443.031px]" data-name="span">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
@@ -284,7 +284,7 @@ function Span() {
   );
 }
 
-function Phone() {
+function PhoneIcon() {
   return (
     <div className="relative shrink-0 size-[14px]" data-name="Phone">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14 14">
@@ -301,7 +301,7 @@ function Phone() {
   );
 }
 
-function Span1() {
+function PhoneNumber() {
   return (
     <div className="flex-[1_0_0] h-[20px] min-h-px min-w-px relative" data-name="span">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
@@ -313,18 +313,18 @@ function Span1() {
   );
 }
 
-function A() {
+function PhoneLink() {
   return (
     <div className="h-[20px] relative shrink-0 w-[114.453px]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[4px] items-center relative size-full">
-        <Phone />
-        <Span1 />
+        <PhoneIcon />
+        <PhoneNumber />
       </div>
     </div>
   );
 }
 
-function A1() {
+function EmailLink() {
   return (
     <div className="flex-[1_0_0] h-[20px] min-h-px min-w-px relative" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
@@ -336,27 +336,27 @@ function A1() {
   );
 }
 
-function Container1() {
+function TopBarLinks() {
   return (
     <div className="h-[20px] relative shrink-0 w-[339.094px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[16px] items-center relative size-full">
-        <A />
-        <A1 />
+        <PhoneLink />
+        <EmailLink />
       </div>
     </div>
   );
 }
 
-function Container() {
+function TopBar() {
   return (
     <div className="absolute bg-[#0a4a50] content-stretch flex h-[36px] items-center justify-between left-0 px-[100px] top-0 w-[1440px]" data-name="Container">
-      <Span />
-      <Container1 />
+      <TopBarSlogan />
+      <TopBarLinks />
     </div>
   );
 }
 
-function Frame26() {
+function AdviceBadge() {
   return (
     <div className="content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[200px] shrink-0 w-[309px]" style={{ backgroundImage: "linear-gradient(90deg, rgba(241, 250, 254, 0) 0%, rgb(241, 250, 254) 34.782%, rgb(241, 250, 254) 63.285%, rgba(241, 250, 254, 0) 100%)" }}>
       <div className="flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] not-italic relative shrink-0 text-[#00766a] text-[14px] tracking-[1.4px] uppercase whitespace-nowrap">
@@ -366,10 +366,10 @@ function Frame26() {
   );
 }
 
-function Frame21() {
+function AdviceTitleBlock() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[628px]">
-      <Frame26 />
+      <AdviceBadge />
       <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[48px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] tracking-[0.12px] w-[min-content]">
         <p className="leading-[64px]">{`Caregiving Services & Support`}</p>
       </div>
@@ -377,7 +377,7 @@ function Frame21() {
   );
 }
 
-function Frame28() {
+function AdviceDescriptionBlock() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start relative shrink-0 w-[518px]">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] min-w-full not-italic relative shrink-0 text-[#5b5b5b] text-[16px] w-[min-content]">We offer flexible direct care support for individuals with developmental or physical disabilities, seniors, those with cancer and more.</p>
@@ -391,16 +391,16 @@ function Frame28() {
   );
 }
 
-function Frame19() {
+function AdviceHeaderRow() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <Frame21 />
-      <Frame28 />
+      <AdviceTitleBlock />
+      <AdviceDescriptionBlock />
     </div>
   );
 }
 
-function Frame29() {
+function IconCall() {
   return (
     <div className="bg-white content-stretch flex items-center p-[16px] relative rounded-[200px] shrink-0">
       <div className="relative shrink-0 size-[32px]" data-name="communication/call">
@@ -417,25 +417,25 @@ function Frame29() {
   );
 }
 
-function Frame5() {
+function AdviceCard1Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full">
-      <Frame29 />
+      <IconCall />
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.4] not-italic relative shrink-0 text-[20px] text-white w-[441px]">{`Personal Product & Service Advice`}</p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.4] not-italic relative shrink-0 text-[16px] text-white w-[669px]">Get personalized guidance and recommendations from our experts and trusted partners to find the right care solutions for your needs.</p>
     </div>
   );
 }
 
-function Frame4() {
+function AdviceCard1() {
   return (
     <div className="bg-[#00766a] content-stretch flex flex-col h-[196px] items-center p-[20px] relative rounded-[16px] shrink-0 w-[816px]">
-      <Frame5 />
+      <AdviceCard1Content />
     </div>
   );
 }
 
-function Frame30() {
+function IconMore() {
   return (
     <div className="bg-white content-stretch flex items-center p-[16px] relative rounded-[200px] shrink-0">
       <div className="overflow-clip relative shrink-0 size-[32px]" data-name="navigation/more-circle">
@@ -452,10 +452,10 @@ function Frame30() {
   );
 }
 
-function Frame6() {
+function AdviceCard2Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full">
-      <Frame30 />
+      <IconMore />
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.4] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[20px] w-[min-content]">Orientation in the Care Landscape</p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[0] min-w-full not-italic relative shrink-0 text-[#5b5b5b] text-[16px] w-[min-content]">
         <span className="leading-[1.4]">{`We help you navigate the `}</span>
@@ -466,28 +466,28 @@ function Frame6() {
   );
 }
 
-function Frame3() {
+function AdviceCard2() {
   return (
     <div className="bg-[rgba(230,241,240,0.5)] flex-[1_0_0] h-[196px] min-h-px min-w-px relative rounded-[16px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col items-center p-[20px] relative size-full">
-          <Frame6 />
+          <AdviceCard2Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame36() {
+function CardsRow1() {
   return (
     <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame4 />
-      <Frame3 />
+      <AdviceCard1 />
+      <AdviceCard2 />
     </div>
   );
 }
 
-function Frame31() {
+function IconDocument() {
   return (
     <div className="bg-white content-stretch flex items-center p-[16px] relative rounded-[200px] shrink-0">
       <div className="relative shrink-0 size-[32px]" data-name="system/document">
@@ -504,29 +504,29 @@ function Frame31() {
   );
 }
 
-function Frame8() {
+function AdviceCard3Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full">
-      <Frame31 />
+      <IconDocument />
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.4] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[20px] w-[min-content]">Online Guide</p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.4] min-w-full not-italic relative shrink-0 text-[#5b5b5b] text-[16px] w-[min-content]">Access step-by-step resources, articles, and practical tips anytime.</p>
     </div>
   );
 }
 
-function Frame7() {
+function AdviceCard3() {
   return (
     <div className="bg-[rgba(230,241,240,0.5)] flex-[1_0_0] h-[196px] min-h-px min-w-px relative rounded-[16px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col items-center p-[20px] relative size-full">
-          <Frame8 />
+          <AdviceCard3Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame32() {
+function IconAlert() {
   return (
     <div className="bg-white content-stretch flex items-center p-[16px] relative rounded-[200px] shrink-0">
       <div className="relative shrink-0 size-[32px]" data-name="system/alert-info">
@@ -543,29 +543,29 @@ function Frame32() {
   );
 }
 
-function Frame9() {
+function AdviceCard4Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full">
-      <Frame32 />
+      <IconAlert />
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.4] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[20px] w-[min-content]">{`Benefits & Applications Information`}</p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.4] min-w-full not-italic relative shrink-0 text-[#5b5b5b] text-[16px] w-[min-content]">Clear, reliable information on healthcare benefits.</p>
     </div>
   );
 }
 
-function Frame2() {
+function AdviceCard4() {
   return (
     <div className="bg-[rgba(230,241,240,0.5)] flex-[1_0_0] h-[196px] min-h-px min-w-px relative rounded-[16px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col items-center p-[20px] relative size-full">
-          <Frame9 />
+          <AdviceCard4Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame33() {
+function IconAccount() {
   return (
     <div className="bg-white content-stretch flex items-center p-[16px] relative rounded-[200px] shrink-0">
       <div className="relative shrink-0 size-[32px]" data-name="system/account-person">
@@ -582,73 +582,73 @@ function Frame33() {
   );
 }
 
-function Frame11() {
+function AdviceCard5Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-between min-h-px min-w-px relative w-full">
-      <Frame33 />
+      <IconAccount />
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.4] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[20px] w-[min-content]">Advisor</p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.4] min-w-full not-italic relative shrink-0 text-[#5b5b5b] text-[16px] w-[min-content]">A dedicated advisor is always ready to answer your questions and assist.</p>
     </div>
   );
 }
 
-function Frame10() {
+function AdviceCard5() {
   return (
     <div className="bg-[rgba(230,241,240,0.5)] flex-[1_0_0] h-[196px] min-h-px min-w-px relative rounded-[16px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col items-center p-[20px] relative size-full">
-          <Frame11 />
+          <AdviceCard5Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame37() {
+function CardsRow2() {
   return (
     <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame7 />
-      <Frame2 />
-      <Frame10 />
+      <AdviceCard3 />
+      <AdviceCard4 />
+      <AdviceCard5 />
     </div>
   );
 }
 
-function Frame41() {
+function AdviceCardsGrid() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start justify-center min-h-px min-w-px relative">
-      <Frame36 />
-      <Frame37 />
+      <CardsRow1 />
+      <CardsRow2 />
     </div>
   );
 }
 
-function Frame34() {
+function AdviceCardsContainer() {
   return (
     <div className="content-stretch flex items-start relative shrink-0 w-full">
-      <Frame41 />
+      <AdviceCardsGrid />
     </div>
   );
 }
 
-function Frame35() {
+function SupportAdviceLayout() {
   return (
     <div className="content-stretch flex flex-col gap-[64px] items-start relative shrink-0 w-full">
-      <Frame19 />
-      <Frame34 />
+      <AdviceHeaderRow />
+      <AdviceCardsContainer />
     </div>
   );
 }
 
-function Desktop2() {
+function SupportAdviceSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-white content-stretch flex flex-col items-start left-1/2 overflow-clip px-[100px] py-[120px] top-[1854px] w-[1440px]" data-name="Desktop - 3">
-      <Frame35 />
+      <SupportAdviceLayout />
     </div>
   );
 }
 
-function Frame77() {
+function InHomeCareText() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-start not-italic relative shrink-0 w-full">
       <div className="flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#00766a] text-[48px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] tracking-[-0.144px] w-full">
@@ -659,7 +659,7 @@ function Frame77() {
   );
 }
 
-function Frame70() {
+function ServiceProgramsStat() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-[138px] items-start justify-center min-h-px min-w-px py-[20px] relative">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#ff7865] text-[42px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)]">
@@ -670,7 +670,7 @@ function Frame70() {
   );
 }
 
-function Frame71() {
+function FamiliesServedStat() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-[138px] items-start justify-center min-h-px min-w-px py-[20px] relative">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#ff7865] text-[42px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)]">
@@ -681,7 +681,7 @@ function Frame71() {
   );
 }
 
-function Frame72() {
+function CountiesCertifiedStat() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] h-[138px] items-start justify-center min-h-px min-w-px py-[20px] relative">
       <div className="flex flex-col font-['Manrope:Bold',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#ff7865] text-[42px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)]">
@@ -692,39 +692,39 @@ function Frame72() {
   );
 }
 
-function Frame76() {
+function StatsRow() {
   return (
     <div className="content-stretch flex items-center relative shrink-0 w-full whitespace-nowrap">
-      <Frame70 />
-      <Frame71 />
-      <Frame72 />
+      <ServiceProgramsStat />
+      <FamiliesServedStat />
+      <CountiesCertifiedStat />
     </div>
   );
 }
 
-function Frame69() {
+function InHomeCareContent() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col h-full items-start justify-between min-h-px min-w-px relative">
-      <Frame77 />
-      <Frame76 />
+      <InHomeCareText />
+      <StatsRow />
     </div>
   );
 }
 
-function Desktop3() {
+function InHomeCareSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-white content-stretch flex gap-[80px] items-center left-1/2 overflow-clip px-[100px] py-[120px] top-[1066px] w-[1440px]" data-name="Desktop - 3">
       <div className="flex flex-[1_0_0] flex-row items-center self-stretch">
-        <Frame69 />
+        <InHomeCareContent />
       </div>
       <div className="h-[548px] relative rounded-[16px] shrink-0 w-[622px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgFrame48096695} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgInHomeCare} />
       </div>
     </div>
   );
 }
 
-function Frame52() {
+function ServiceOverviewText() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start not-italic relative shrink-0 w-[397.33px]">
       <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#171a1b] text-[40px] tracking-[0.1px] w-[397.33px]">
@@ -735,7 +735,7 @@ function Frame52() {
   );
 }
 
-function ArrowUpRight() {
+function ArrowIcon() {
   return (
     <div className="absolute right-[-0.34px] size-[32px] top-0" data-name="ArrowUpRight">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
@@ -747,25 +747,22 @@ function ArrowUpRight() {
   );
 }
 
-function Frame53() {
+function ServiceIcon_Home() {
   return (
     <div className="h-[191px] overflow-clip relative shrink-0 w-full">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[66px] top-[calc(50%+0.5px)]" data-name="system/home">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
-          <g id="Path" />
-        </svg>
-        <div className="absolute inset-[10.42%_6.25%]" data-name="Shape">
-          <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 57.75 52.25">
-            <path clipRule="evenodd" d={svgPaths.p1336e580} fill="var(--fill-0, white)" fillRule="evenodd" id="Shape" />
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 flex items-center justify-center">
+        <div className="size-[66px] flex items-center justify-center">
+          <svg className="size-[40px]" viewBox="0 0 24 24">
+            <path d={svgPaths.pCommunity} fill="white" />
           </svg>
         </div>
       </div>
-      <ArrowUpRight />
+      <ArrowIcon />
     </div>
   );
 }
 
-function Frame54() {
+function ServiceCard_1_Content() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[1.6] not-italic relative shrink-0 text-white w-full">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[20px] w-full">{`Community & Family Focused`}</p>
@@ -774,20 +771,20 @@ function Frame54() {
   );
 }
 
-function Frame12() {
+function ServiceCard_Home() {
   return (
     <div className="bg-[#00766a] flex-[1_0_0] min-h-px min-w-px relative rounded-[20px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[20px] relative size-full">
-          <Frame53 />
-          <Frame54 />
+          <ServiceIcon_Home />
+          <ServiceCard_1_Content />
         </div>
       </div>
     </div>
   );
 }
 
-function ArrowUpRight1() {
+function ArrowIconDark() {
   return (
     <div className="absolute right-0 size-[32px] top-0" data-name="ArrowUpRight">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
@@ -799,25 +796,22 @@ function ArrowUpRight1() {
   );
 }
 
-function Frame55() {
+function ServiceIcon_Like() {
   return (
     <div className="h-[191px] overflow-clip relative shrink-0 w-full">
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[66px] top-[calc(50%+0.5px)]" data-name="media/like-filled">
-        <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 32 32">
-          <g id="Path" />
-        </svg>
-        <div className="absolute inset-[12.5%_6.25%]" data-name="Shape">
-          <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 57.75 49.5">
-            <path clipRule="evenodd" d={svgPaths.p20879e80} fill="var(--fill-0, #DDDDDD)" fillRule="evenodd" id="Shape" />
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 flex items-center justify-center">
+        <div className="size-[66px] flex items-center justify-center">
+          <svg className="size-[40px]" viewBox="0 0 24 24">
+            <path d={svgPaths.pCustomized} fill="#00766A" />
           </svg>
         </div>
       </div>
-      <ArrowUpRight1 />
+      <ArrowIconDark />
     </div>
   );
 }
 
-function Frame56() {
+function ServiceCard_Customized_Content() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[20px] w-full">Customized care</p>
@@ -826,33 +820,33 @@ function Frame56() {
   );
 }
 
-function Frame13() {
+function ServiceCard_Customized() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[20px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[20px] relative size-full">
-          <Frame55 />
-          <Frame56 />
+          <ServiceIcon_Like />
+          <ServiceCard_Customized_Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame39() {
+function ServicesRow_1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[24px] items-start min-h-px min-w-px relative">
-      <Frame12 />
-      <Frame13 />
+      <ServiceCard_Home />
+      <ServiceCard_Customized />
     </div>
   );
 }
 
-function Frame51() {
+function ServicesHeaderLayout() {
   return (
     <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame52 />
-      <Frame39 />
+      <ServiceOverviewText />
+      <ServicesRow_1 />
     </div>
   );
 }
@@ -869,7 +863,7 @@ function ArrowUpRight2() {
   );
 }
 
-function Frame57() {
+function ServiceIcon_Layers() {
   return (
     <div className="h-[191px] overflow-clip relative shrink-0 w-full">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 overflow-clip size-[66px] top-[calc(50%+0.5px)]" data-name="maps/layers">
@@ -882,12 +876,12 @@ function Frame57() {
           </svg>
         </div>
       </div>
-      <ArrowUpRight2 />
+      <ArrowIconDark />
     </div>
   );
 }
 
-function Frame58() {
+function ServiceCard_Transportation_Content() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[1.6] not-italic relative shrink-0 w-full">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[#171a1b] text-[20px] w-full">Transportation</p>
@@ -896,13 +890,13 @@ function Frame58() {
   );
 }
 
-function Frame14() {
+function ServiceCard_Transportation() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[20px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[20px] relative size-full">
-          <Frame57 />
-          <Frame58 />
+          <ServiceIcon_Layers />
+          <ServiceCard_Transportation_Content />
         </div>
       </div>
     </div>
@@ -933,16 +927,16 @@ function ArrowUpRight3() {
   );
 }
 
-function Frame59() {
+function ServiceIcon_Modeling() {
   return (
     <div className="h-[191px] overflow-clip relative shrink-0 w-full">
       <Modeling />
-      <ArrowUpRight3 />
+      <ArrowIconDark />
     </div>
   );
 }
 
-function Frame60() {
+function ServiceCard_Quality_Content() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[1.6] not-italic relative shrink-0 w-full">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[#171a1b] text-[20px] w-full">Improved Quality of Life</p>
@@ -951,13 +945,13 @@ function Frame60() {
   );
 }
 
-function Frame15() {
+function ServiceCard_Quality() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[20px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[20px] relative size-full">
-          <Frame59 />
-          <Frame60 />
+          <ServiceIcon_Modeling />
+          <ServiceCard_Quality_Content />
         </div>
       </div>
     </div>
@@ -988,16 +982,16 @@ function ArrowUpRight4() {
   );
 }
 
-function Frame61() {
+function ServiceIcon_Volunteer() {
   return (
     <div className="h-[191px] overflow-clip relative shrink-0 w-full">
       <Volunter />
-      <ArrowUpRight4 />
+      <ArrowIconDark />
     </div>
   );
 }
 
-function Frame62() {
+function ServiceCard_Staff_Content() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start leading-[1.6] not-italic relative shrink-0 w-full">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[#171a1b] text-[20px] w-full">{`Professional & trained staff`}</p>
@@ -1006,42 +1000,42 @@ function Frame62() {
   );
 }
 
-function Frame16() {
+function ServiceCard_Staff() {
   return (
     <div className="bg-white flex-[1_0_0] min-h-px min-w-px relative rounded-[20px]">
       <div className="flex flex-col items-center size-full">
         <div className="content-stretch flex flex-col gap-[24px] items-center p-[20px] relative size-full">
-          <Frame61 />
-          <Frame62 />
+          <ServiceIcon_Volunteer />
+          <ServiceCard_Staff_Content />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame40() {
+function ServicesRow_2() {
   return (
     <div className="content-stretch flex gap-[24px] items-start relative shrink-0 w-full">
-      <Frame14 />
-      <Frame15 />
-      <Frame16 />
+      <ServiceCard_Transportation />
+      <ServiceCard_Quality />
+      <ServiceCard_Staff />
     </div>
   );
 }
 
-function Frame38() {
+function ServicesGridContainer() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full">
-      <Frame51 />
-      <Frame40 />
+      <ServicesHeaderLayout />
+      <ServicesRow_2 />
     </div>
   );
 }
 
-function Desktop4() {
+function ServicesOverviewSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-[rgba(42,157,143,0.1)] content-stretch flex flex-col gap-[48px] items-center justify-center left-1/2 overflow-clip px-[100px] py-[120px] top-[2760px] w-[1440px]" data-name="Desktop - 4">
-      <Frame38 />
+      <ServicesGridContainer />
       <div className="content-stretch flex h-[54px] items-center justify-center pl-[20px] pr-[16px] relative rounded-br-[24px] rounded-tl-[24px] shrink-0" data-name="Button/Default/Rounded">
         <div aria-hidden="true" className="absolute border border-[#00766a] border-solid inset-0 pointer-events-none rounded-br-[24px] rounded-tl-[24px]" />
         <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#00766a] text-[16px] text-center whitespace-nowrap">
@@ -1052,7 +1046,7 @@ function Desktop4() {
   );
 }
 
-function Desktop1() {
+function TrustStatementBanner() {
   return (
     <div className="-translate-x-1/2 absolute bg-[#00766a] content-stretch flex h-[401px] items-center justify-between left-1/2 overflow-clip p-[100px] top-[3864px] w-[1440px]" data-name="Desktop - 2">
       <div className="flex flex-[1_0_0] flex-col font-['Manrope:Bold',sans-serif] font-bold h-full justify-center leading-[0] min-h-px min-w-px relative text-[48px] text-center text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] text-white">
@@ -1062,7 +1056,7 @@ function Desktop1() {
   );
 }
 
-function Frame27() {
+function YouthBadge() {
   return (
     <div className="bg-[#f1fafe] content-stretch flex items-center justify-center px-[12px] py-[6px] relative rounded-[200px] shrink-0">
       <div className="flex flex-col font-['Poppins:SemiBold',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#00766a] text-[14px] uppercase whitespace-nowrap">
@@ -1072,10 +1066,10 @@ function Frame27() {
   );
 }
 
-function Title() {
+function YouthTitleBlock() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start justify-center relative shrink-0 w-full" data-name="Title">
-      <Frame27 />
+      <YouthBadge />
       <div className="flex flex-col font-['Inter:Semi_Bold',sans-serif] font-semibold justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[0px] tracking-[0.12px] w-[min-content]">
         <p className="text-[48px]">
           <span className="leading-[64px] text-[#1a1a2e]">{`Expanding Care for `}</span>
@@ -1275,32 +1269,32 @@ function Container2() {
   );
 }
 
-function Frame63() {
+function YouthSectionText() {
   return (
     <div className="content-stretch flex flex-col h-full items-start justify-between relative shrink-0 w-[628px]">
-      <Title />
+      <YouthTitleBlock />
       <Container2 />
     </div>
   );
 }
 
-function Frame17() {
+function YouthSectionLayout() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[44px] items-center min-h-px min-w-px relative">
       <div className="flex flex-row items-center self-stretch">
-        <Frame63 />
+        <YouthSectionText />
       </div>
       <div className="h-[654px] relative rounded-[16px] shrink-0 w-[568px]" data-name="image">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgFrame48096696} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgYouthProgram} />
       </div>
     </div>
   );
 }
 
-function Desktop5() {
+function YouthProgramsSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-[#eaf6f4] content-stretch flex items-start left-1/2 overflow-clip px-[100px] py-[120px] top-[4265px] w-[1440px]" data-name="Desktop - 7">
-      <Frame17 />
+      <YouthSectionLayout />
     </div>
   );
 }
@@ -1314,29 +1308,32 @@ function Frame65() {
   );
 }
 
-function Frame64() {
+function TestimonialHeader_1() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1086} width="44" />
       </div>
-      <Frame65 />
+      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
+        <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Cameron Williamson</p>
+        <p className="font-['Inter:Regular',sans-serif] font-normal opacity-70 relative shrink-0 text-[14px] w-full">Dental Assistant</p>
+      </div>
     </div>
   );
 }
 
-function Component9() {
+function TestimonialCard_1() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="01">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame64 />
+        <TestimonialHeader_1 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life.</p>
       </div>
     </div>
   );
 }
 
-function Frame68() {
+function TestimonialAuthor_2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Wanda Maximoff</p>
@@ -1345,29 +1342,29 @@ function Frame68() {
   );
 }
 
-function Frame66() {
+function TestimonialHeader_2() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1087} width="44" />
       </div>
-      <Frame68 />
+      <TestimonialAuthor_2 />
     </div>
   );
 }
 
-function Component10() {
+function TestimonialCard_2() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="02">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame66 />
+        <TestimonialHeader_2 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame74() {
+function TestimonialAuthor_3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Natasha Romanoff</p>
@@ -1376,29 +1373,29 @@ function Frame74() {
   );
 }
 
-function Frame73() {
+function TestimonialHeader_3() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1088} width="44" />
       </div>
-      <Frame74 />
+      <TestimonialAuthor_3 />
     </div>
   );
 }
 
-function Component11() {
+function TestimonialCard_3() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="03">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame73 />
+        <TestimonialHeader_3 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Frame78() {
+function TestimonialAuthor_4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Cameron Williamson</p>
@@ -1407,40 +1404,40 @@ function Frame78() {
   );
 }
 
-function Frame75() {
+function TestimonialHeader_4() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1086} width="44" />
       </div>
-      <Frame78 />
+      <TestimonialAuthor_4 />
     </div>
   );
 }
 
-function Component12() {
+function TestimonialCard_4() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="04">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame75 />
+        <TestimonialHeader_4 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Row3() {
+function TestimonialRow_4() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Row 4">
-      <Component9 />
-      <Component10 />
-      <Component11 />
-      <Component12 />
+      <TestimonialCard_1 />
+      <TestimonialCard_2 />
+      <TestimonialCard_3 />
+      <TestimonialCard_4 />
     </div>
   );
 }
 
-function Frame80() {
+function TestimonialAuthor_5() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Harleen Quinzel</p>
@@ -1449,29 +1446,29 @@ function Frame80() {
   );
 }
 
-function Frame79() {
+function TestimonialHeader_5() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1089} width="44" />
       </div>
-      <Frame80 />
+      <TestimonialAuthor_5 />
     </div>
   );
 }
 
-function Component1() {
+function TestimonialCard_5() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="01">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame79 />
+        <TestimonialHeader_5 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame82() {
+function TestimonialAuthor_6() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Carol Danvers</p>
@@ -1480,29 +1477,29 @@ function Frame82() {
   );
 }
 
-function Frame81() {
+function TestimonialHeader_6() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1090} width="44" />
       </div>
-      <Frame82 />
+      <TestimonialAuthor_6 />
     </div>
   );
 }
 
-function Component2() {
+function TestimonialCard_6() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="02">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame81 />
+        <TestimonialHeader_6 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Frame84() {
+function TestimonialAuthor_7() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Juan Attwood</p>
@@ -1511,29 +1508,29 @@ function Frame84() {
   );
 }
 
-function Frame83() {
+function TestimonialHeader_7() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1091} width="44" />
       </div>
-      <Frame84 />
+      <TestimonialAuthor_7 />
     </div>
   );
 }
 
-function Component3() {
+function TestimonialCard_7() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="03">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame83 />
+        <TestimonialHeader_7 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame86() {
+function TestimonialAuthor_8() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Wanda Maximoff</p>
@@ -1542,40 +1539,40 @@ function Frame86() {
   );
 }
 
-function Frame85() {
+function TestimonialHeader_8() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1087} width="44" />
       </div>
-      <Frame86 />
+      <TestimonialAuthor_8 />
     </div>
   );
 }
 
-function Component4() {
+function TestimonialCard_8() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="4">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame85 />
+        <TestimonialHeader_8 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Row2() {
+function TestimonialRow_3() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Row 3">
-      <Component1 />
-      <Component2 />
-      <Component3 />
-      <Component4 />
+      <TestimonialCard_5 />
+      <TestimonialCard_6 />
+      <TestimonialCard_7 />
+      <TestimonialCard_8 />
     </div>
   );
 }
 
-function Frame88() {
+function TestimonialAuthor_9() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Alan Carrington</p>
@@ -1584,29 +1581,29 @@ function Frame88() {
   );
 }
 
-function Frame87() {
+function TestimonialHeader_9() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1092} width="44" />
       </div>
-      <Frame88 />
+      <TestimonialAuthor_9 />
     </div>
   );
 }
 
-function Component() {
+function TestimonialCard_9() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="1">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame87 />
+        <TestimonialHeader_9 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Frame90() {
+function TestimonialAuthor_10() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Brian Bargeman</p>
@@ -1615,29 +1612,29 @@ function Frame90() {
   );
 }
 
-function Frame89() {
+function TestimonialHeader_10() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1093} width="44" />
       </div>
-      <Frame90 />
+      <TestimonialAuthor_10 />
     </div>
   );
 }
 
-function Component5() {
+function TestimonialCard_10() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="2">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame89 />
+        <TestimonialHeader_10 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame92() {
+function TestimonialAuthor_11() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Brendan Carroll</p>
@@ -1646,29 +1643,29 @@ function Frame92() {
   );
 }
 
-function Frame91() {
+function TestimonialHeader_11() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1094} width="44" />
       </div>
-      <Frame92 />
+      <TestimonialAuthor_11 />
     </div>
   );
 }
 
-function Component6() {
+function TestimonialCard_11() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="3">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame91 />
+        <TestimonialHeader_11 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way. It has become an essential part of my daily life.</p>
       </div>
     </div>
   );
 }
 
-function Frame94() {
+function TestimonialAuthor_12() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Zhanatan Donaldson</p>
@@ -1677,40 +1674,40 @@ function Frame94() {
   );
 }
 
-function Frame93() {
+function TestimonialHeader_12() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1095} width="44" />
       </div>
-      <Frame94 />
+      <TestimonialAuthor_12 />
     </div>
   );
 }
 
-function Component7() {
+function TestimonialCard_12() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="02">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame93 />
+        <TestimonialHeader_12 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Row() {
+function TestimonialRow_1() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Row 1">
-      <Component />
-      <Component5 />
-      <Component6 />
-      <Component7 />
+      <TestimonialCard_9 />
+      <TestimonialCard_10 />
+      <TestimonialCard_11 />
+      <TestimonialCard_12 />
     </div>
   );
 }
 
-function Frame96() {
+function TestimonialAuthor_13() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Kaden Fane</p>
@@ -1719,29 +1716,29 @@ function Frame96() {
   );
 }
 
-function Frame95() {
+function TestimonialHeader_13() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1096} width="44" />
       </div>
-      <Frame96 />
+      <TestimonialAuthor_13 />
     </div>
   );
 }
 
-function Component8() {
+function TestimonialCard_13() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="01">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame95 />
+        <TestimonialHeader_13 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame98() {
+function TestimonialAuthor_14() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Zhanatan Donaldson</p>
@@ -1750,29 +1747,29 @@ function Frame98() {
   );
 }
 
-function Frame97() {
+function TestimonialHeader_14() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1095} width="44" />
       </div>
-      <Frame98 />
+      <TestimonialAuthor_14 />
     </div>
   );
 }
 
-function Component13() {
+function TestimonialCard_14() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="02">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame97 />
+        <TestimonialHeader_14 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Frame100() {
+function TestimonialAuthor_15() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Samuel Moore</p>
@@ -1781,29 +1778,29 @@ function Frame100() {
   );
 }
 
-function Frame99() {
+function TestimonialHeader_15() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1097} width="44" />
       </div>
-      <Frame100 />
+      <TestimonialAuthor_15 />
     </div>
   );
 }
 
-function Component14() {
+function TestimonialCard_15() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="03">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame99 />
+        <TestimonialHeader_15 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Outstanding customer support! They went above and beyond to help me resolve my issue. I felt valued as a customer, and their commitment to ensuring my satisfaction left a lasting impression.</p>
       </div>
     </div>
   );
 }
 
-function Frame102() {
+function TestimonialAuthor_16() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[2px] items-start justify-center leading-[1.6] min-h-px min-w-px not-italic relative text-[#171a1b]">
       <p className="font-['Inter:Semi_Bold',sans-serif] font-semibold relative shrink-0 text-[16px] w-full">Alan Carrington</p>
@@ -1812,57 +1809,57 @@ function Frame102() {
   );
 }
 
-function Frame101() {
+function TestimonialHeader_16() {
   return (
     <div className="content-stretch flex gap-[10px] items-center relative shrink-0 w-full">
       <div className="relative shrink-0 size-[44px]">
         <img alt="" className="absolute block inset-0 max-w-none size-full" height="44" src={imgEllipse1092} width="44" />
       </div>
-      <Frame102 />
+      <TestimonialAuthor_16 />
     </div>
   );
 }
 
-function Component15() {
+function TestimonialCard_16() {
   return (
     <div className="bg-[#f5f5f5] relative rounded-[16px] shrink-0 w-full" data-name="1">
       <div className="content-stretch flex flex-col gap-[16px] items-start p-[20px] relative size-full">
-        <Frame101 />
+        <TestimonialHeader_16 />
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[1.5] not-italic opacity-80 relative shrink-0 text-[#171a1b] text-[16px] w-full">Highly recommended! This product exceeded my expectations in every way.</p>
       </div>
     </div>
   );
 }
 
-function Row1() {
+function TestimonialRow_2() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-px relative" data-name="Row 2">
-      <Component8 />
-      <Component13 />
-      <Component14 />
-      <Component15 />
+      <TestimonialCard_13 />
+      <TestimonialCard_14 />
+      <TestimonialCard_15 />
+      <TestimonialCard_16 />
     </div>
   );
 }
 
-function Frame67() {
+function TestimonialsGridContainer() {
   return (
     <div className="content-stretch flex gap-[16px] h-[786px] items-start relative shrink-0 w-full">
-      <Row3 />
-      <Row2 />
-      <Row />
-      <Row1 />
+      <TestimonialRow_4 />
+      <TestimonialRow_3 />
+      <TestimonialRow_1 />
+      <TestimonialRow_2 />
     </div>
   );
 }
 
-function Desktop6() {
+function TestimonialsInner() {
   return (
     <div className="bg-white h-[1144px] relative shrink-0 w-full" data-name="Desktop - 14">
       <div className="flex flex-col items-center overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col gap-[60px] items-center px-[100px] py-[120px] relative size-full">
           <p className="font-['Inter:Medium',sans-serif] font-medium leading-[64px] min-w-full not-italic relative shrink-0 text-[#171a1b] text-[48px] text-center tracking-[0.12px] w-[min-content]">See what our members are saying</p>
-          <Frame67 />
+          <TestimonialsGridContainer />
           <div className="absolute bg-gradient-to-b bottom-0 from-[rgba(255,255,255,0)] h-[192px] left-0 to-white w-[1440px]" />
         </div>
       </div>
@@ -1870,10 +1867,10 @@ function Desktop6() {
   );
 }
 
-function Frame124() {
+function TestimonialsSection() {
   return (
     <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[44px] h-[1292px] items-center left-1/2 top-[5159px] w-[1440px]">
-      <Desktop6 />
+      <TestimonialsInner />
       <div className="bg-[#ff7865] content-stretch flex h-[54px] items-center justify-center px-[16px] relative rounded-br-[24px] rounded-tl-[24px] shrink-0" data-name="Button/Default/Rounded">
         <div className="flex flex-col font-['Manrope:SemiBold',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[16px] text-center text-white whitespace-nowrap">
           <p className="leading-[1.6]">Show More →</p>
@@ -1883,7 +1880,7 @@ function Frame124() {
   );
 }
 
-function Frame() {
+function ContactTitle() {
   return (
     <div className="content-stretch flex flex-col gap-[32px] items-start justify-center not-italic relative shrink-0 w-[527px]">
       <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#171a1b] text-[0px] text-shadow-[0px_0px_24px_rgba(255,255,255,0.16)] tracking-[-0.3px] w-full">
@@ -1911,7 +1908,7 @@ function VuesaxLinearSms() {
   );
 }
 
-function Frame115() {
+function ContactIcon_Email() {
   return (
     <div className="backdrop-blur-[12px] bg-[rgba(176,213,209,0.5)] content-stretch flex items-center justify-center p-[10px] relative rounded-[50px] shrink-0 size-[48px]">
       <div className="relative shrink-0 size-[24px]" data-name="sms">
@@ -1921,7 +1918,7 @@ function Frame115() {
   );
 }
 
-function Frame117() {
+function ContactDetail_Email() {
   return (
     <div className="content-stretch flex flex-col items-start leading-[1.6] not-italic relative shrink-0 text-[#171a1b] w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[20px] w-full">Email</p>
@@ -1930,11 +1927,11 @@ function Frame117() {
   );
 }
 
-function Frame118() {
+function ContactCard_Email() {
   return (
-    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[20px] shrink-0 w-[274px]">
-      <Frame115 />
-      <Frame117 />
+    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[200px] shrink-0 w-[274px]">
+      <ContactIcon_Email />
+      <ContactDetail_Email />
     </div>
   );
 }
@@ -1956,7 +1953,7 @@ function VuesaxLinearCallCalling() {
   );
 }
 
-function Frame116() {
+function ContactIcon_Phone() {
   return (
     <div className="backdrop-blur-[12px] bg-[rgba(176,213,209,0.5)] content-stretch flex items-center p-[10px] relative rounded-[50px] shrink-0 size-[48px]">
       <div className="relative shrink-0 size-[24px]" data-name="call-calling">
@@ -1966,7 +1963,7 @@ function Frame116() {
   );
 }
 
-function Frame122() {
+function ContactDetail_Phone() {
   return (
     <div className="content-stretch flex flex-col items-start leading-[1.6] not-italic relative shrink-0 text-[#171a1b] w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[20px] w-full">Phone</p>
@@ -1975,34 +1972,34 @@ function Frame122() {
   );
 }
 
-function Frame119() {
+function ContactCard_Phone() {
   return (
-    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[20px] shrink-0 w-[274px]">
-      <Frame116 />
-      <Frame122 />
+    <div className="backdrop-blur-[12px] bg-[#eaf6f4] content-stretch flex flex-col gap-[10px] items-start p-[16px] relative rounded-[200px] shrink-0 w-[274px]">
+      <ContactIcon_Phone />
+      <ContactDetail_Phone />
     </div>
   );
 }
 
-function Frame120() {
+function ContactCardsRow() {
   return (
     <div className="content-stretch flex gap-[16px] items-start justify-center relative shrink-0 w-full">
-      <Frame118 />
-      <Frame119 />
+      <ContactCard_Email />
+      <ContactCard_Phone />
     </div>
   );
 }
 
-function Frame121() {
+function ContactTextWrapper() {
   return (
     <div className="absolute content-stretch flex flex-col gap-[109px] items-start left-[101px] top-[155px] w-[564px]">
-      <Frame />
-      <Frame120 />
+      <ContactTitle />
+      <ContactCardsRow />
     </div>
   );
 }
 
-function Frame114() {
+function ContactFormTitle() {
   return (
     <div className="content-stretch flex flex-col gap-[6px] items-start leading-[1.6] not-italic relative shrink-0 w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium relative shrink-0 text-[#171a1b] text-[24px] whitespace-nowrap">Tell us what you need</p>
@@ -2011,7 +2008,7 @@ function Frame114() {
   );
 }
 
-function Frame103() {
+function FormInput_Name() {
   return (
     <div className="relative rounded-[10px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
@@ -2024,16 +2021,16 @@ function Frame103() {
   );
 }
 
-function Frame105() {
+function FormField_Name() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">Full Name</p>
-      <Frame103 />
+      <FormInput_Name />
     </div>
   );
 }
 
-function Frame104() {
+function FormInput_Phone() {
   return (
     <div className="relative rounded-[10px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
@@ -2046,25 +2043,25 @@ function Frame104() {
   );
 }
 
-function Frame106() {
+function FormField_Phone() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col gap-[12px] items-start min-h-px min-w-px relative">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">Phone Number</p>
-      <Frame104 />
+      <FormInput_Phone />
     </div>
   );
 }
 
-function Frame111() {
+function FormRow_NamePhone() {
   return (
     <div className="content-stretch flex gap-[30px] items-center relative shrink-0 w-full">
-      <Frame105 />
-      <Frame106 />
+      <FormField_Name />
+      <FormField_Phone />
     </div>
   );
 }
 
-function Frame108() {
+function FormInput_Email() {
   return (
     <div className="relative rounded-[10px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
@@ -2077,16 +2074,16 @@ function Frame108() {
   );
 }
 
-function Frame107() {
+function FormField_Email() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">Email</p>
-      <Frame108 />
+      <FormInput_Email />
     </div>
   );
 }
 
-function Frame109() {
+function FormInput_Message() {
   return (
     <div className="h-[124px] relative rounded-[10px] shrink-0 w-full">
       <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[10px]" />
@@ -2097,31 +2094,31 @@ function Frame109() {
   );
 }
 
-function Frame110() {
+function FormField_Message() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] h-[158px] items-start relative shrink-0 w-full">
       <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.6] not-italic relative shrink-0 text-[#171a1b] text-[12px] w-full">How can we help you?</p>
-      <Frame109 />
+      <FormInput_Message />
     </div>
   );
 }
 
-function Frame112() {
+function FormFieldsGrid() {
   return (
     <div className="content-stretch flex flex-col gap-[30px] items-start relative shrink-0 w-full">
-      <Frame111 />
-      <Frame107 />
-      <Frame110 />
+      <FormRow_NamePhone />
+      <FormField_Email />
+      <FormField_Message />
     </div>
   );
 }
 
-function Frame113() {
+function ContactFormCard() {
   return (
     <div className="-translate-x-1/2 absolute bg-white content-stretch flex flex-col gap-[32px] items-start left-[calc(50%+329.5px)] p-[24px] rounded-[20px] top-[143px] w-[541px]">
       <div aria-hidden="true" className="absolute border border-[rgba(61,61,61,0.1)] border-solid inset-0 pointer-events-none rounded-[20px]" />
-      <Frame114 />
-      <Frame112 />
+      <ContactFormTitle />
+      <FormFieldsGrid />
       <div className="bg-[#00766a] h-[54px] relative rounded-[200px] shrink-0 w-full" data-name="Button/Default/Rounded">
         <div className="flex flex-row items-center justify-center size-full">
           <div className="content-stretch flex items-center justify-center px-[16px] relative size-full">
@@ -2135,16 +2132,16 @@ function Frame113() {
   );
 }
 
-function Desktop7() {
+function ContactSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-white h-[870px] left-1/2 overflow-clip top-[6451px] w-[1440px]" data-name="Desktop - 15">
-      <Frame121 />
-      <Frame113 />
+      <ContactTextWrapper />
+      <ContactFormCard />
     </div>
   );
 }
 
-function Logo1() {
+function FooterLogo() {
   return (
     <div className="relative shrink-0" data-name="Logo">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[12px] items-end justify-center relative size-full">
@@ -2163,15 +2160,15 @@ function Logo1() {
   );
 }
 
-function Container13() {
+function FooterLogoContainer() {
   return (
     <div className="absolute content-stretch flex h-[36px] items-center left-0 top-0 w-[282px]" data-name="Container">
-      <Logo1 />
+      <FooterLogo />
     </div>
   );
 }
 
-function P3() {
+function FooterAboutText() {
   return (
     <div className="absolute h-[95.188px] left-0 top-[52px] w-[282px]" data-name="p">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[23.8px] left-0 text-[14px] text-white top-0 w-[282px]" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2181,7 +2178,7 @@ function P3() {
   );
 }
 
-function Facebook() {
+function IconFacebook() {
   return (
     <div className="relative shrink-0 size-[16px]" data-name="Facebook">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
@@ -2193,17 +2190,17 @@ function Facebook() {
   );
 }
 
-function A2() {
+function SocialLinkFacebook() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] relative rounded-[33554400px] shrink-0 size-[36px]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-        <Facebook />
+        <IconFacebook />
       </div>
     </div>
   );
 }
 
-function Instagram() {
+function IconInstagram() {
   return (
     <div className="relative shrink-0 size-[16px]" data-name="Instagram">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
@@ -2222,36 +2219,36 @@ function Instagram() {
   );
 }
 
-function A3() {
+function SocialLinkInstagram() {
   return (
     <div className="bg-[rgba(255,255,255,0.1)] relative rounded-[33554400px] shrink-0 size-[36px]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-        <Instagram />
+        <IconInstagram />
       </div>
     </div>
   );
 }
 
-function Container14() {
+function SocialLinksContainer() {
   return (
     <div className="absolute content-stretch flex gap-[12px] h-[36px] items-start left-0 top-[171.19px] w-[282px]" data-name="Container">
-      <A2 />
-      <A3 />
+      <SocialLinkFacebook />
+      <SocialLinkInstagram />
     </div>
   );
 }
 
-function Container12() {
+function FooterBrandColumn() {
   return (
     <div className="col-1 h-[207.188px] justify-self-stretch relative row-1 shrink-0" data-name="Container">
-      <Container13 />
-      <P3 />
-      <Container14 />
+      <FooterLogoContainer />
+      <FooterAboutText />
+      <SocialLinksContainer />
     </div>
   );
 }
 
-function H3() {
+function FooterColumnTitle_QuickLinks() {
   return (
     <div className="content-stretch flex h-[22.5px] items-start relative shrink-0 w-full" data-name="h4">
       <p className="flex-[1_0_0] font-['Poppins:SemiBold',sans-serif] leading-[22.5px] min-h-px min-w-px not-italic relative text-[15px] text-white">Quick Links</p>
@@ -2259,7 +2256,7 @@ function H3() {
   );
 }
 
-function Li() {
+function FooterLink_Home() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2269,7 +2266,7 @@ function Li() {
   );
 }
 
-function Li1() {
+function FooterLink_About() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2279,7 +2276,7 @@ function Li1() {
   );
 }
 
-function Li2() {
+function FooterLink_Services() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2289,7 +2286,7 @@ function Li2() {
   );
 }
 
-function Li3() {
+function FooterLink_Youth() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2299,7 +2296,7 @@ function Li3() {
   );
 }
 
-function Li4() {
+function FooterLink_Contact() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2309,28 +2306,28 @@ function Li4() {
   );
 }
 
-function Ul() {
+function FooterLinksList() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
-      <Li />
-      <Li1 />
-      <Li2 />
-      <Li3 />
-      <Li4 />
+      <FooterLink_Home />
+      <FooterLink_About />
+      <FooterLink_Services />
+      <FooterLink_Youth />
+      <FooterLink_Contact />
     </div>
   );
 }
 
-function Container15() {
+function FooterColumn_QuickLinks() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
-      <H3 />
-      <Ul />
+      <FooterColumnTitle_QuickLinks />
+      <FooterLinksList />
     </div>
   );
 }
 
-function H4() {
+function FooterColumnTitle_Services() {
   return (
     <div className="content-stretch flex h-[22.5px] items-start relative shrink-0 w-full" data-name="h4">
       <p className="flex-[1_0_0] font-['Poppins:SemiBold',sans-serif] leading-[22.5px] min-h-px min-w-px not-italic relative text-[15px] text-white">Services</p>
@@ -2338,7 +2335,7 @@ function H4() {
   );
 }
 
-function Li5() {
+function FooterService_Respite() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2348,7 +2345,7 @@ function Li5() {
   );
 }
 
-function Li6() {
+function FooterService_AdultDay() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2358,7 +2355,7 @@ function Li6() {
   );
 }
 
-function Li7() {
+function FooterService_Community() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2368,7 +2365,7 @@ function Li7() {
   );
 }
 
-function Li8() {
+function FooterService_Vocational() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2378,7 +2375,7 @@ function Li8() {
   );
 }
 
-function Li9() {
+function FooterService_Transportation() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="li">
       <p className="absolute font-['Open_Sans:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-white top-[2px] whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2388,28 +2385,28 @@ function Li9() {
   );
 }
 
-function Ul1() {
+function FooterServicesList() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
-      <Li5 />
-      <Li6 />
-      <Li7 />
-      <Li8 />
-      <Li9 />
+      <FooterService_Respite />
+      <FooterService_AdultDay />
+      <FooterService_Community />
+      <FooterService_Vocational />
+      <FooterService_Transportation />
     </div>
   );
 }
 
-function Container16() {
+function FooterColumn_Services() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
-      <H4 />
-      <Ul1 />
+      <FooterColumnTitle_Services />
+      <FooterServicesList />
     </div>
   );
 }
 
-function H5() {
+function FooterColumnTitle_Contact() {
   return (
     <div className="content-stretch flex h-[22.5px] items-start relative shrink-0 w-full" data-name="h4">
       <p className="flex-[1_0_0] font-['Poppins:SemiBold',sans-serif] leading-[22.5px] min-h-px min-w-px not-italic relative text-[15px] text-white">Contact Us</p>
@@ -2430,7 +2427,7 @@ function MapPin() {
   );
 }
 
-function Span2() {
+function FooterAddressText() {
   return (
     <div className="absolute font-['Open_Sans:Regular',sans-serif] font-normal h-[40px] leading-[20px] left-[28px] text-[14px] text-white top-0 w-[184.219px] whitespace-nowrap" data-name="span">
       <p className="absolute left-0 top-0" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2443,16 +2440,16 @@ function Span2() {
   );
 }
 
-function Li10() {
+function FooterContactInfo_Address() {
   return (
     <div className="h-[40px] relative shrink-0 w-full" data-name="li">
       <MapPin />
-      <Span2 />
+      <FooterAddressText />
     </div>
   );
 }
 
-function Phone1() {
+function IconPhone_Footer() {
   return (
     <div className="relative shrink-0 size-[16px]" data-name="Phone">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
@@ -2469,7 +2466,7 @@ function Phone1() {
   );
 }
 
-function A4() {
+function FooterPhoneLink() {
   return (
     <div className="h-[20px] relative shrink-0 w-[96.453px]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
@@ -2479,16 +2476,16 @@ function A4() {
   );
 }
 
-function Li11() {
+function FooterContactInfo_Phone() {
   return (
     <div className="content-stretch flex gap-[12px] h-[20px] items-center relative shrink-0 w-full" data-name="li">
-      <Phone1 />
-      <A4 />
+      <IconPhone_Footer />
+      <FooterPhoneLink />
     </div>
   );
 }
 
-function Mail() {
+function IconMail_Footer() {
   return (
     <div className="relative shrink-0 size-[16px]" data-name="Mail">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
@@ -2501,7 +2498,7 @@ function Mail() {
   );
 }
 
-function A5() {
+function FooterEmailLink() {
   return (
     <div className="h-[20px] relative shrink-0 w-[208.641px]" data-name="a">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
@@ -2513,16 +2510,16 @@ function A5() {
   );
 }
 
-function Li12() {
+function FooterContactInfo_Email() {
   return (
     <div className="content-stretch flex gap-[12px] h-[20px] items-center relative shrink-0 w-full" data-name="li">
-      <Mail />
-      <A5 />
+      <IconMail_Footer />
+      <FooterEmailLink />
     </div>
   );
 }
 
-function Clock() {
+function IconClock_Footer() {
   return (
     <div className="absolute left-0 size-[16px] top-[4px]" data-name="Clock">
       <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
@@ -2540,7 +2537,7 @@ function Clock() {
   );
 }
 
-function Span3() {
+function FooterHoursText() {
   return (
     <div className="absolute font-['Open_Sans:Regular',sans-serif] font-normal h-[40px] leading-[20px] left-[28px] text-[14px] text-white top-0 w-[135.234px] whitespace-nowrap" data-name="span">
       <p className="absolute left-0 top-0" style={{ fontVariationSettings: "'wdth' 100" }}>
@@ -2553,68 +2550,68 @@ function Span3() {
   );
 }
 
-function Li13() {
+function FooterContactInfo_Hours() {
   return (
     <div className="h-[40px] relative shrink-0 w-full" data-name="li">
-      <Clock />
-      <Span3 />
+      <IconClock_Footer />
+      <FooterHoursText />
     </div>
   );
 }
 
-function Ul2() {
+function FooterContactList() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] h-[168px] items-start relative shrink-0 w-full" data-name="ul">
-      <Li10 />
-      <Li11 />
-      <Li12 />
-      <Li13 />
+      <FooterContactInfo_Address />
+      <FooterContactInfo_Phone />
+      <FooterContactInfo_Email />
+      <FooterContactInfo_Hours />
     </div>
   );
 }
 
-function Container17() {
+function FooterColumn_Contact() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] h-[207px] items-start relative shrink-0 w-[240px]" data-name="Container">
-      <H5 />
-      <Ul2 />
+      <FooterColumnTitle_Contact />
+      <FooterContactList />
     </div>
   );
 }
 
-function Frame125() {
+function FooterNavColumnsGrid() {
   return (
     <div className="content-stretch flex gap-[40px] items-center justify-end relative shrink-0">
-      <Container15 />
-      <Container16 />
-      <Container17 />
+      <FooterColumn_QuickLinks />
+      <FooterColumn_Services />
+      <FooterColumn_Contact />
     </div>
   );
 }
 
-function Frame123() {
+function FooterNavWrapper() {
   return (
     <div className="col-2 content-stretch flex items-center justify-end justify-self-start relative row-1 self-start shrink-0">
-      <Frame125 />
+      <FooterNavColumnsGrid />
     </div>
   );
 }
 
-function Div() {
+function FooterColumnsGrid() {
   return (
     <div className="gap-x-[40px] gap-y-[40px] grid grid-cols-[repeat(4,minmax(0,1fr))] grid-rows-[repeat(1,minmax(0,1fr))] h-[207.188px] relative shrink-0 w-[1248px]" data-name="div">
-      <Container12 />
-      <Frame123 />
+      <FooterBrandColumn />
+      <FooterNavWrapper />
     </div>
   );
 }
 
-function Top() {
+function FooterMain() {
   return (
     <div className="relative shrink-0 w-full" data-name="Top">
       <div className="overflow-clip rounded-[inherit] size-full">
         <div className="content-stretch flex flex-col items-start px-[100px] py-[60px] relative size-full">
-          <Div />
+          <FooterColumnsGrid />
         </div>
       </div>
     </div>
@@ -2630,7 +2627,7 @@ function List() {
   );
 }
 
-function Copyright() {
+function FooterCopyright() {
   return (
     <div className="relative shrink-0 w-[1440px]" data-name="Copyright">
       <div className="content-stretch flex font-['Inter:Regular',sans-serif] font-normal items-start justify-between leading-[1.6] not-italic overflow-clip px-[120px] py-[32px] relative rounded-[inherit] size-full text-[14px] text-white whitespace-nowrap">
@@ -2642,11 +2639,11 @@ function Copyright() {
   );
 }
 
-function Footer() {
+function FooterSection() {
   return (
     <div className="-translate-x-1/2 absolute bg-[#00766a] content-stretch flex flex-col items-center left-1/2 overflow-clip top-[7321px] w-[1440px]" data-name="Footer">
-      <Top />
-      <Copyright />
+      <FooterMain />
+      <FooterCopyright />
     </div>
   );
 }
@@ -2654,16 +2651,16 @@ function Footer() {
 export default function LandingPage() {
   return (
     <div className="bg-white relative size-full" data-name="Landing Page">
-      <Desktop />
-      <Container />
-      <Desktop2 />
-      <Desktop3 />
-      <Desktop4 />
-      <Desktop1 />
-      <Desktop5 />
-      <Frame124 />
-      <Desktop7 />
-      <Footer />
+      <NavbarInner />
+      <HeroSection />
+      <SupportAdviceSection />
+      <InHomeCareSection />
+      <ServicesOverviewSection />
+      <TrustStatementBanner />
+      <YouthProgramsSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <FooterSection />
     </div>
   );
 }
